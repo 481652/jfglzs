@@ -1,0 +1,21 @@
+﻿Imports System
+Imports System.Diagnostics
+Imports System.Reflection
+Imports System.Runtime.CompilerServices
+Imports System.Runtime.InteropServices
+Imports System.Runtime.Versioning
+
+<Assembly: AssemblyVersion("1.0.0.0")>
+<Assembly: AssemblyConfiguration("")>
+<Assembly: Guid("ca03f0bd-3033-4420-8b48-e574750c6d44")>
+<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyDelaySign(False)>
+<Assembly: AssemblyKeyName("")>
+<Assembly: AssemblyKeyFile("")>
+<Assembly: AssemblyTitle("")>
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyTrademark("")>
+<Assembly: ComVisible(False)>
+<Assembly: AssemblyProduct("")>
+<Assembly: AssemblyCopyright("")>

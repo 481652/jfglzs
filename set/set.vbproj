@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3EE43CAC-173F-4F28-92FF-51D95BC90FC9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>set</RootNamespace>
+    <AssemblyName>set</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>set.ico</ApplicationIcon>
+    <StartupObject>set.Internal.ContextCollection</StartupObject>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System">
+      <HintPath>G:\各种工具与资源\逆向工具\.net逆向工具\dnSpy-net-win64\bin\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>G:\各种工具与资源\逆向工具\.net逆向工具\dnSpy-net-win64\bin\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="-Module-{B27D2BC0-BD74-44D1-A786-EF6824394D63}.vb" />
+    <Compile Include="ILLicenseModule.vb" />
+    <Compile Include="Internal\CandidateCollection.vb" />
+    <Compile Include="Internal\CollectionCollection.vb" />
+    <Compile Include="Internal\ContextCollection.vb" />
+    <Compile Include="Internal\DescriptorCandidate.vb" />
+    <Compile Include="Internal\MessageCollection.vb" />
+    <Compile Include="Internal\ParamsCollection.vb" />
+    <Compile Include="Internal\ProcCollection.vb" />
+    <Compile Include="Internal\RepositoryCandidate.vb" />
+    <Compile Include="Internal\WrapperCollection.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="WindowsApplication1\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsApplication1\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsApplication1\Form3.Designer.vb">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsApplication1\Form3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsApplication1\load.Designer.vb">
+      <DependentUpon>load.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsApplication1\load.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsApplication1\My\MySettings.Designer.vb">
+      <DependentUpon>MySettings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="WindowsApplication1\My\MySettingsProperty.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="4b109a6f-94c5-4d4c-bae5-302725b9bc38" />
+    <EmbeddedResource Include="set.g.resources" />
+    <EmbeddedResource Include="WindowsApplication1\Form1.resources" />
+    <EmbeddedResource Include="WindowsApplication1\Form3.resources" />
+    <EmbeddedResource Include="WindowsApplication1\load.resources" />
+    <EmbeddedResource Include="WindowsApplication1\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="WindowsApplication1\My\MySettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MySettings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
