@@ -10,18 +10,18 @@ Imports Microsoft.VisualBasic.CompilerServices
 Imports Microsoft.Win32
 
 Namespace WindowsApplication1
-	' Token: 0x0200000B RID: 11
+
 	<DesignerGenerated()>
 	Public Partial Class Form1
 		Inherits Form
 
-		' Token: 0x06000026 RID: 38 RVA: 0x000023F8 File Offset: 0x000005F8
+	
 		Public Sub New()
 			AddHandler MyBase.Load, AddressOf Me.VerifyPolicy
 			Me.OrderPolicy()
 		End Sub
 
-		' Token: 0x06000027 RID: 39 RVA: 0x0000287C File Offset: 0x00000A7C
+	
 		Private Sub AssetPolicy(sender As Object, e As EventArgs)
 			If Operators.CompareString(Conversions.ToString(IteratorWrapper.DisablePolicy(Registry.CurrentUser, "Software", "n", "")), "", False) = 0 Then
 				Process.Start(Application.StartupPath + "\set.exe")
@@ -30,22 +30,22 @@ Namespace WindowsApplication1
 			ClientWrapper.DestroyPolicy.Form3.Show()
 		End Sub
 
-		' Token: 0x06000028 RID: 40 RVA: 0x00002418 File Offset: 0x00000618
+	
 		Private Sub PreparePolicy(sender As Object, e As EventArgs)
 			Process.Start(Application.StartupPath + "\set.exe", Conversions.ToString(1))
 		End Sub
 
-		' Token: 0x06000029 RID: 41 RVA: 0x00002435 File Offset: 0x00000635
+	
 		Private Sub LogoutPolicy(sender As Object, e As EventArgs)
 			Process.Start("http://www.jfglzs.com/")
 		End Sub
 
-		' Token: 0x0600002A RID: 42 RVA: 0x000028DC File Offset: 0x00000ADC
+	
 		Private Function RegisterPolicy(string_0 As String) As Boolean
 			Return Process.GetProcessesByName(string_0).Length > 0
 		End Function
 
-		' Token: 0x0600002B RID: 43 RVA: 0x00002442 File Offset: 0x00000642
+	
 		Private Sub ManagePolicy(sender As Object, e As EventArgs)
 			If Not Me.RegisterPolicy("jfglzsn") Then
 				Me.Label2.Text = "关 闭"
@@ -54,7 +54,7 @@ Namespace WindowsApplication1
 			Me.Label2.Text = "正在运行中。。。"
 		End Sub
 
-		' Token: 0x0600002C RID: 44 RVA: 0x000028FC File Offset: 0x00000AFC
+	
 		Private Sub ComputePolicy(sender As Object, e As EventArgs)
 			If Operators.CompareString(Conversions.ToString(IteratorWrapper.DisablePolicy(Registry.CurrentUser, "Software", "n", "")), "", False) = 0 Then
 				Process.Start(Application.StartupPath + "\set.exe")
@@ -69,26 +69,26 @@ Namespace WindowsApplication1
 			Process.Start("explorer.exe")
 		End Sub
 
-		' Token: 0x0600002D RID: 45 RVA: 0x00002472 File Offset: 0x00000672
+	
 		Private Sub FindPolicy(sender As Object, e As LinkLabelLinkClickedEventArgs)
 			Process.Start("http://www.jfglzs.com")
 		End Sub
 
-		' Token: 0x0600002E RID: 46 RVA: 0x0000247F File Offset: 0x0000067F
+	
 		Private Sub RemovePolicy(sender As Object, e As ToolStripItemClickedEventArgs)
 		End Sub
 
-		' Token: 0x0600002F RID: 47 RVA: 0x00002481 File Offset: 0x00000681
+	
 		Private Sub IncludePolicy(sender As Object, e As EventArgs)
 			Process.Start(Application.StartupPath + "\更新器.exe")
 		End Sub
 
-		' Token: 0x06000030 RID: 48 RVA: 0x00002498 File Offset: 0x00000698
+	
 		Private Sub CallPolicy(sender As Object, e As LinkLabelLinkClickedEventArgs)
 			Process.Start("http://www.jfglzs.com/c1.html")
 		End Sub
 
-		' Token: 0x06000031 RID: 49 RVA: 0x000029A4 File Offset: 0x00000BA4
+	
 		Private Sub VerifyPolicy(sender As Object, e As EventArgs)
 			' The following expression was wrapped in a checked-statement
 			Dim num As Integer = DateAndTime.Month(DateAndTime.Now) * DateAndTime.Day(DateAndTime.Now)
@@ -117,7 +117,7 @@ Namespace WindowsApplication1
 			IteratorWrapper.m_MockWrapper = text2 + ".exe"
 		End Sub
 
-		' Token: 0x06000033 RID: 51 RVA: 0x00002B4C File Offset: 0x00000D4C
+	
 		<DebuggerStepThrough()>
 		Private Sub OrderPolicy()
 			Me.exporterWrapper = New Container()
@@ -212,7 +212,7 @@ Namespace WindowsApplication1
 			MyBase.PerformLayout()
 		End Sub
 
-		' Token: 0x1700000C RID: 12
+	
 		' (get) Token: 0x06000034 RID: 52 RVA: 0x000024A5 File Offset: 0x000006A5
 		' (set) Token: 0x06000035 RID: 53 RVA: 0x00003100 File Offset: 0x00001300
 		Friend Overridable Property MenuStrip1 As MenuStrip
@@ -236,12 +236,12 @@ Namespace WindowsApplication1
 			End Set
 		End Property
 
-		' Token: 0x1700000D RID: 13
+	
 		' (get) Token: 0x06000036 RID: 54 RVA: 0x000024AD File Offset: 0x000006AD
 		' (set) Token: 0x06000037 RID: 55 RVA: 0x000024B5 File Offset: 0x000006B5
 		Friend Overridable Property 系统功能FToolStripMenuItem As ToolStripMenuItem
 
-		' Token: 0x1700000E RID: 14
+	
 		' (get) Token: 0x06000038 RID: 56 RVA: 0x000024BE File Offset: 0x000006BE
 		' (set) Token: 0x06000039 RID: 57 RVA: 0x00003144 File Offset: 0x00001344
 		Friend Overridable Property 设置ToolStripMenuItem As ToolStripMenuItem
@@ -265,7 +265,7 @@ Namespace WindowsApplication1
 			End Set
 		End Property
 
-		' Token: 0x1700000F RID: 15
+	
 		' (get) Token: 0x0600003A RID: 58 RVA: 0x000024C6 File Offset: 0x000006C6
 		' (set) Token: 0x0600003B RID: 59 RVA: 0x00003188 File Offset: 0x00001388
 		Friend Overridable Property 退出程序ToolStripMenuItem As ToolStripMenuItem
@@ -289,7 +289,7 @@ Namespace WindowsApplication1
 			End Set
 		End Property
 
-		' Token: 0x17000010 RID: 16
+	
 		' (get) Token: 0x0600003C RID: 60 RVA: 0x000024CE File Offset: 0x000006CE
 		' (set) Token: 0x0600003D RID: 61 RVA: 0x000031CC File Offset: 0x000013CC
 		Friend Overridable Property 访问官网ToolStripMenuItem As ToolStripMenuItem
@@ -313,7 +313,7 @@ Namespace WindowsApplication1
 			End Set
 		End Property
 
-		' Token: 0x17000011 RID: 17
+	
 		' (get) Token: 0x0600003E RID: 62 RVA: 0x000024D6 File Offset: 0x000006D6
 		' (set) Token: 0x0600003F RID: 63 RVA: 0x00003210 File Offset: 0x00001410
 		Friend Overridable Property Timer1 As Timer
@@ -337,17 +337,17 @@ Namespace WindowsApplication1
 			End Set
 		End Property
 
-		' Token: 0x17000012 RID: 18
+	
 		' (get) Token: 0x06000040 RID: 64 RVA: 0x000024DE File Offset: 0x000006DE
 		' (set) Token: 0x06000041 RID: 65 RVA: 0x000024E6 File Offset: 0x000006E6
 		Friend Overridable Property Label2 As Label
 
-		' Token: 0x17000013 RID: 19
+	
 		' (get) Token: 0x06000042 RID: 66 RVA: 0x000024EF File Offset: 0x000006EF
 		' (set) Token: 0x06000043 RID: 67 RVA: 0x000024F7 File Offset: 0x000006F7
 		Friend Overridable Property Label1 As Label
 
-		' Token: 0x17000014 RID: 20
+	
 		' (get) Token: 0x06000044 RID: 68 RVA: 0x00002500 File Offset: 0x00000700
 		' (set) Token: 0x06000045 RID: 69 RVA: 0x00003254 File Offset: 0x00001454
 		Friend Overridable Property LinkLabel1 As LinkLabel
@@ -371,7 +371,7 @@ Namespace WindowsApplication1
 			End Set
 		End Property
 
-		' Token: 0x17000015 RID: 21
+	
 		' (get) Token: 0x06000046 RID: 70 RVA: 0x00002508 File Offset: 0x00000708
 		' (set) Token: 0x06000047 RID: 71 RVA: 0x00003298 File Offset: 0x00001498
 		Friend Overridable Property LinkLabel2 As LinkLabel
@@ -395,7 +395,7 @@ Namespace WindowsApplication1
 			End Set
 		End Property
 
-		' Token: 0x17000016 RID: 22
+	
 		' (get) Token: 0x06000048 RID: 72 RVA: 0x00002510 File Offset: 0x00000710
 		' (set) Token: 0x06000049 RID: 73 RVA: 0x000032DC File Offset: 0x000014DC
 		Friend Overridable Property 启动小助手ToolStripMenuItem As ToolStripMenuItem
@@ -419,60 +419,60 @@ Namespace WindowsApplication1
 			End Set
 		End Property
 
-		' Token: 0x0400000F RID: 15
+	
 		Private m_ParameterWrapper As Long
 
-		' Token: 0x04000011 RID: 17
+	
 		<AccessedThroughProperty("MenuStrip1")>
 		<CompilerGenerated()>
 		Private _RegistryWrapper As MenuStrip
 
-		' Token: 0x04000012 RID: 18
+	
 		<CompilerGenerated()>
 		<AccessedThroughProperty("系统功能FToolStripMenuItem")>
 		Private methodWrapper As ToolStripMenuItem
 
-		' Token: 0x04000013 RID: 19
+	
 		<AccessedThroughProperty("设置ToolStripMenuItem")>
 		<CompilerGenerated()>
 		Private dicWrapper As ToolStripMenuItem
 
-		' Token: 0x04000014 RID: 20
+	
 		<AccessedThroughProperty("退出程序ToolStripMenuItem")>
 		<CompilerGenerated()>
 		Private facadeWrapper As ToolStripMenuItem
 
-		' Token: 0x04000015 RID: 21
+	
 		<CompilerGenerated()>
 		<AccessedThroughProperty("访问官网ToolStripMenuItem")>
 		Private _WorkerWrapper As ToolStripMenuItem
 
-		' Token: 0x04000016 RID: 22
+	
 		<AccessedThroughProperty("Timer1")>
 		<CompilerGenerated()>
 		Private _PublisherWrapper As Timer
 
-		' Token: 0x04000017 RID: 23
+	
 		<AccessedThroughProperty("Label2")>
 		<CompilerGenerated()>
 		Private m_InfoWrapper As Label
 
-		' Token: 0x04000018 RID: 24
+	
 		<CompilerGenerated()>
 		<AccessedThroughProperty("Label1")>
 		Private m_CreatorWrapper As Label
 
-		' Token: 0x04000019 RID: 25
+	
 		<AccessedThroughProperty("LinkLabel1")>
 		<CompilerGenerated()>
 		Private _ModelWrapper As LinkLabel
 
-		' Token: 0x0400001A RID: 26
+	
 		<AccessedThroughProperty("LinkLabel2")>
 		<CompilerGenerated()>
 		Private m_ObjectWrapper As LinkLabel
 
-		' Token: 0x0400001B RID: 27
+	
 		<AccessedThroughProperty("启动小助手ToolStripMenuItem")>
 		<CompilerGenerated()>
 		Private m_MerchantWrapper As ToolStripMenuItem

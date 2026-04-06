@@ -7,9 +7,9 @@ Imports System.Text
 Imports System.Threading
 
 Namespace WindowsApplication1.Internal
-	' Token: 0x0200001A RID: 26
+
 	Friend Class SystemToken
-		' Token: 0x060000F1 RID: 241 RVA: 0x0000D7B4 File Offset: 0x0000B9B4
+	
 		Friend Shared Sub smethod_0()
 			If Not SystemToken._CandidateToken Then
 				SystemToken._CandidateToken = True
@@ -18,7 +18,7 @@ Namespace WindowsApplication1.Internal
 			End If
 		End Sub
 
-		' Token: 0x060000F2 RID: 242 RVA: 0x0000D7E8 File Offset: 0x0000B9E8
+	
 		Private Shared Function DeleteStatus(object_0 As Object, resolveEventArgs_0 As ResolveEventArgs) As Assembly
 			Dim flag As Boolean = False
 			Dim result As Assembly
@@ -84,7 +84,7 @@ Namespace WindowsApplication1.Internal
 			Return result
 		End Function
 
-		' Token: 0x060000F3 RID: 243 RVA: 0x0000DA00 File Offset: 0x0000BC00
+	
 		Private Shared Function SearchStatus(string_0 As String) As String
 			Dim text As String = string_0.Trim()
 			Dim num As Integer = text.IndexOf(","c)
@@ -94,10 +94,10 @@ Namespace WindowsApplication1.Internal
 			Return text
 		End Function
 
-		' Token: 0x040000C1 RID: 193
+	
 		Private Shared m_ValToken As Hashtable = New Hashtable()
 
-		' Token: 0x040000C2 RID: 194
+	
 		Private Shared _CandidateToken As Boolean = False
 	End Class
 End Namespace

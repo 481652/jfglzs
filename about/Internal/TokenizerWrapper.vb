@@ -7,9 +7,9 @@ Imports System.Text
 Imports System.Threading
 
 Namespace about.Internal
-	' Token: 0x02000015 RID: 21
+
 	Friend Class TokenizerWrapper
-		' Token: 0x06000096 RID: 150 RVA: 0x00008670 File Offset: 0x00006870
+	
 		Friend Shared Sub smethod_0()
 			If Not TokenizerWrapper.producerWrapper Then
 				TokenizerWrapper.producerWrapper = True
@@ -18,7 +18,7 @@ Namespace about.Internal
 			End If
 		End Sub
 
-		' Token: 0x06000097 RID: 151 RVA: 0x000086A4 File Offset: 0x000068A4
+	
 		Private Shared Function EnableWrapper(object_0 As Object, resolveEventArgs_0 As ResolveEventArgs) As Assembly
 			Dim flag As Boolean = False
 			Dim result As Assembly
@@ -84,7 +84,7 @@ Namespace about.Internal
 			Return result
 		End Function
 
-		' Token: 0x06000098 RID: 152 RVA: 0x000088BC File Offset: 0x00006ABC
+	
 		Private Shared Function RestartWrapper(string_0 As String) As String
 			Dim text As String = string_0.Trim()
 			Dim num As Integer = text.IndexOf(","c)
@@ -94,10 +94,10 @@ Namespace about.Internal
 			Return text
 		End Function
 
-		' Token: 0x04000039 RID: 57
+	
 		Private Shared systemWrapper As Hashtable = New Hashtable()
 
-		' Token: 0x0400003A RID: 58
+	
 		Private Shared producerWrapper As Boolean = False
 	End Class
 End Namespace

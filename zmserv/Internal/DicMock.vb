@@ -7,9 +7,9 @@ Imports System.Security.Cryptography
 Imports System.Text
 
 Namespace zmserv.Internal
-	' Token: 0x0200000D RID: 13
+
 	Friend Class DicMock
-		' Token: 0x06000023 RID: 35 RVA: 0x0000282C File Offset: 0x00000A2C
+	
 		Shared Sub New()
 			DicMock.watcherMock = False
 			DicMock._InvocationMock = False
@@ -27,11 +27,11 @@ Namespace zmserv.Internal
 			DicMock.definitionMock = False
 		End Sub
 
-		' Token: 0x06000024 RID: 36 RVA: 0x0000235B File Offset: 0x0000055B
+	
 		Private Sub method_0()
 		End Sub
 
-		' Token: 0x06000025 RID: 37 RVA: 0x000028D4 File Offset: 0x00000AD4
+	
 		Friend Shared Function DefineClass(object_0 As Object) As Byte()
 			Dim array As UInteger() = New UInteger(15) {}
 			Dim num As Integer = 448 - object_0.Length * 8 Mod 512
@@ -144,32 +144,32 @@ Namespace zmserv.Internal
 			Return array4
 		End Function
 
-		' Token: 0x06000026 RID: 38 RVA: 0x0000235D File Offset: 0x0000055D
+	
 		Private Shared Sub CalcClass(ByRef uint_0 As UInteger, uint_1 As UInteger, uint_2 As UInteger, uint_3 As UInteger, uint_4 As UInteger, ushort_0 As UShort, uint_5 As UInteger, object_0 As Object)
 			uint_0 = uint_1 + DicMock.ViewClass(uint_0 + ((uint_1 And uint_2) Or (Not uint_1 And uint_3)) + object_0(CInt(CType(uint_4, UIntPtr))) + DicMock.decoratorMock(CInt(CType((uint_5 - 1UI), UIntPtr))), ushort_0)
 		End Sub
 
-		' Token: 0x06000027 RID: 39 RVA: 0x00002388 File Offset: 0x00000588
+	
 		Private Shared Sub InitClass(ByRef uint_0 As UInteger, uint_1 As UInteger, uint_2 As UInteger, uint_3 As UInteger, uint_4 As UInteger, ushort_0 As UShort, uint_5 As UInteger, object_0 As Object)
 			uint_0 = uint_1 + DicMock.ViewClass(uint_0 + ((uint_1 And uint_3) Or (uint_2 And Not uint_3)) + object_0(CInt(CType(uint_4, UIntPtr))) + DicMock.decoratorMock(CInt(CType((uint_5 - 1UI), UIntPtr))), ushort_0)
 		End Sub
 
-		' Token: 0x06000028 RID: 40 RVA: 0x000023B3 File Offset: 0x000005B3
+	
 		Private Shared Sub UpdateClass(ByRef uint_0 As UInteger, uint_1 As UInteger, uint_2 As UInteger, uint_3 As UInteger, uint_4 As UInteger, ushort_0 As UShort, uint_5 As UInteger, object_0 As Object)
 			uint_0 = uint_1 + DicMock.ViewClass(uint_0 + (uint_1 Xor uint_2 Xor uint_3) + object_0(CInt(CType(uint_4, UIntPtr))) + DicMock.decoratorMock(CInt(CType((uint_5 - 1UI), UIntPtr))), ushort_0)
 		End Sub
 
-		' Token: 0x06000029 RID: 41 RVA: 0x000023DB File Offset: 0x000005DB
+	
 		Private Shared Sub ForgotClass(ByRef uint_0 As UInteger, uint_1 As UInteger, uint_2 As UInteger, uint_3 As UInteger, uint_4 As UInteger, ushort_0 As UShort, uint_5 As UInteger, object_0 As Object)
 			uint_0 = uint_1 + DicMock.ViewClass(uint_0 + (uint_2 Xor (uint_1 Or Not uint_3)) + object_0(CInt(CType(uint_4, UIntPtr))) + DicMock.decoratorMock(CInt(CType((uint_5 - 1UI), UIntPtr))), ushort_0)
 		End Sub
 
-		' Token: 0x0600002A RID: 42 RVA: 0x00002404 File Offset: 0x00000604
+	
 		Private Shared Function ViewClass(uint_0 As UInteger, ushort_0 As UShort) As UInteger
 			Return uint_0 >> CInt((32US - ushort_0)) Or uint_0 << CInt(ushort_0)
 		End Function
 
-		' Token: 0x0600002B RID: 43 RVA: 0x00002416 File Offset: 0x00000616
+	
 		Friend Shared Function CollectClass() As Boolean
 			If Not DicMock.watcherMock Then
 				DicMock.CustomizeClass()
@@ -178,7 +178,7 @@ Namespace zmserv.Internal
 			Return DicMock._InvocationMock
 		End Function
 
-		' Token: 0x0600002C RID: 44 RVA: 0x00002F78 File Offset: 0x00001178
+	
 		Friend Shared Sub CustomizeClass()
 			Try
 				DicMock._InvocationMock = CBool(GetType(RijndaelManaged).Assembly.[GetType]("System.Security.Cryptography.CryptoConfig", False).GetMethod("get_AllowOnlyFipsAlgorithms", BindingFlags.[Static] Or BindingFlags.[Public]).Invoke(Nothing, New Object(-1) {}))
@@ -186,7 +186,7 @@ Namespace zmserv.Internal
 			End Try
 		End Sub
 
-		' Token: 0x0600002D RID: 45 RVA: 0x00002FD8 File Offset: 0x000011D8
+	
 		Friend Shared Function OrderClass() As SymmetricAlgorithm
 			Dim result As SymmetricAlgorithm = Nothing
 			If DicMock.CollectClass() Then
@@ -200,7 +200,7 @@ Namespace zmserv.Internal
 			Return result
 		End Function
 
-		' Token: 0x0600002E RID: 46 RVA: 0x0000242F File Offset: 0x0000062F
+	
 		Friend Shared Function LogoutClass(byte_0 As Byte()) As Byte()
 			If Not DicMock.CollectClass() Then
 				Return New MD5CryptoServiceProvider().ComputeHash(byte_0)
@@ -208,7 +208,7 @@ Namespace zmserv.Internal
 			Return DicMock.DefineClass(byte_0)
 		End Function
 
-		' Token: 0x0600002F RID: 47 RVA: 0x00003018 File Offset: 0x00001218
+	
 		Shared Function ListClass(int_0 As Integer) As Boolean
 			If DicMock.modelMock.Length = 0 Then
 				Dim binaryReader As BinaryReader = New BinaryReader(GetType(DicMock).Assembly.GetManifestResourceStream("065c4a4f-2a8a-4bd2-9556-820e81952a34"))
@@ -471,7 +471,7 @@ Namespace zmserv.Internal
 			Return False
 		End Function
 
-		' Token: 0x06000030 RID: 48 RVA: 0x00003AFC File Offset: 0x00001CFC
+	
 		Shared Function DisableClass(int_0 As Integer) As String
 			If DicMock.expressionMock.Length = 0 Then
 				Dim binaryReader As BinaryReader = New BinaryReader(GetType(DicMock).Assembly.GetManifestResourceStream("4de7c611-3aa3-4c4e-9157-9ebe415916cb"))
@@ -792,7 +792,7 @@ Namespace zmserv.Internal
 			Return ""
 		End Function
 
-		' Token: 0x06000031 RID: 49 RVA: 0x0000482C File Offset: 0x00002A2C
+	
 		Shared Function FillClass(int_0 As Integer) As String
 			If DicMock.merchantMock.Length = 0 Then
 				Dim binaryReader As BinaryReader = New BinaryReader(GetType(DicMock).Assembly.GetManifestResourceStream("4de7c611-3aa3-4c4e-9157-9ebe415916cb"))
@@ -1142,16 +1142,16 @@ Namespace zmserv.Internal
 			Return [string]
 		End Function
 
-		' Token: 0x06000032 RID: 50 RVA: 0x00005690 File Offset: 0x00003890
+	
 		Friend Shared Function ResolveClass(string_0 As String) As String
 			Dim array As Byte() = Convert.FromBase64String(string_0)
 			Return Encoding.Unicode.GetString(array, 0, array.Length)
 		End Function
 
-		' Token: 0x06000033 RID: 51
+	
 		Private Declare Function VirtualProtect Lib "kernel32.dll" (intptr_0 As IntPtr, int_0 As Integer, int_1 As Integer, ByRef int_2 As Integer) As Integer
 
-		' Token: 0x06000034 RID: 52 RVA: 0x000056B4 File Offset: 0x000038B4
+	
 		<DicMock.RoleMock(GetType(DicMock.RoleMock.ProducerMock(Of Object)()))>
 		Shared Sub PostClass()
 			If Not DicMock.definitionMock Then
@@ -1517,7 +1517,7 @@ Namespace zmserv.Internal
 			End If
 		End Sub
 
-		' Token: 0x06000035 RID: 53 RVA: 0x00006688 File Offset: 0x00004888
+	
 		Friend Shared Function RestartClass(assembly_0 As Assembly) As Object
 			Try
 				If File.Exists(CType(assembly_0, Assembly).Location) Then
@@ -1540,19 +1540,19 @@ Namespace zmserv.Internal
 			Return ""
 		End Function
 
-		' Token: 0x06000036 RID: 54
+	
 		Private Declare Function WriteProcessMemory Lib "kernel32.dll" (intptr_0 As IntPtr, intptr_1 As IntPtr, <[In]()> <Out()> byte_0 As Byte(), uint_0 As UInteger, <System.Runtime.InteropServices.OutAttribute()> ByRef intptr_2 As IntPtr) As Integer
 
-		' Token: 0x06000037 RID: 55
+	
 		Private Declare Function ReadProcessMemory Lib "kernel32.dll" (intptr_0 As IntPtr, intptr_1 As IntPtr, <[In]()> <Out()> byte_0 As Byte(), uint_0 As UInteger, <System.Runtime.InteropServices.OutAttribute()> ByRef intptr_2 As IntPtr) As Integer
 
-		' Token: 0x06000038 RID: 56
+	
 		Private Declare Function OpenProcess Lib "kernel32.dll" (uint_0 As UInteger, int_0 As Integer, uint_1 As UInteger) As IntPtr
 
-		' Token: 0x06000039 RID: 57
+	
 		Private Declare Function CloseHandle Lib "kernel32.dll" (intptr_0 As IntPtr) As Integer
 
-		' Token: 0x0600003A RID: 58 RVA: 0x00006798 File Offset: 0x00004998
+	
 		Private Shared Function PrintClass(string_0 As String) As Byte()
 			Dim array As Byte()
 			Using fileStream As FileStream = New FileStream(string_0, FileMode.Open, FileAccess.Read, FileShare.Read)
@@ -1569,7 +1569,7 @@ Namespace zmserv.Internal
 			Return array
 		End Function
 
-		' Token: 0x0600003B RID: 59 RVA: 0x00006800 File Offset: 0x00004A00
+	
 		Private Shared Function FlushClass(byte_0 As Byte()) As Byte()
 			Dim memoryStream As MemoryStream = New MemoryStream()
 			Dim symmetricAlgorithm As SymmetricAlgorithm = DicMock.OrderClass()
@@ -1581,37 +1581,37 @@ Namespace zmserv.Internal
 			Return memoryStream.ToArray()
 		End Function
 
-		' Token: 0x0600003C RID: 60 RVA: 0x0000244A File Offset: 0x0000064A
+	
 		Private Function TestClass() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x0600003D RID: 61 RVA: 0x0000244A File Offset: 0x0000064A
+	
 		Private Function InstantiateClass() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x0600003E RID: 62 RVA: 0x0000244A File Offset: 0x0000064A
+	
 		Private Function PublishClass() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x0600003F RID: 63 RVA: 0x0000244A File Offset: 0x0000064A
+	
 		Private Function CountClass() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x06000040 RID: 64 RVA: 0x0000244A File Offset: 0x0000064A
+	
 		Private Function ManageClass() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x06000041 RID: 65 RVA: 0x0000244A File Offset: 0x0000064A
+	
 		Private Function ChangeClass() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x06000042 RID: 66 RVA: 0x00006870 File Offset: 0x00004A70
+	
 		Friend Function SearchClass() As Byte()
 			Dim text As String = "{11111-22222-40001-00001}"
 			If text.Length > 0 Then
@@ -1620,7 +1620,7 @@ Namespace zmserv.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x06000043 RID: 67 RVA: 0x000068B0 File Offset: 0x00004AB0
+	
 		Friend Function CreateClass() As Byte()
 			Dim text As String = "{11111-22222-40001-00002}"
 			If text.Length > 0 Then
@@ -1629,7 +1629,7 @@ Namespace zmserv.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x06000044 RID: 68 RVA: 0x000068F0 File Offset: 0x00004AF0
+	
 		Friend Function CalculateClass() As Byte()
 			Dim text As String = "{11111-22222-50001-00001}"
 			If text.Length > 0 Then
@@ -1638,7 +1638,7 @@ Namespace zmserv.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x06000045 RID: 69 RVA: 0x00006930 File Offset: 0x00004B30
+	
 		Friend Function SetupClass() As Byte()
 			Dim text As String = "{11111-22222-50001-00002}"
 			If text.Length > 0 Then
@@ -1647,7 +1647,7 @@ Namespace zmserv.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x06000046 RID: 70 RVA: 0x00006970 File Offset: 0x00004B70
+	
 		Friend Function SelectClass() As Byte()
 			Dim text As String = "{11111-22222-60001-00001}"
 			If text.Length > 0 Then
@@ -1656,7 +1656,7 @@ Namespace zmserv.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x06000047 RID: 71 RVA: 0x000069B0 File Offset: 0x00004BB0
+	
 		Friend Function WriteClass() As Byte()
 			Dim text As String = "{11111-22222-60001-00002}"
 			If text.Length > 0 Then
@@ -1665,7 +1665,7 @@ Namespace zmserv.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x06000048 RID: 72 RVA: 0x000069F0 File Offset: 0x00004BF0
+	
 		Friend Shared Function RunClass(string_0 As String, string_1 As String) As String
 			Dim bytes As Byte() = Encoding.Unicode.GetBytes(string_0)
 			Dim array As Byte() = bytes
@@ -1681,66 +1681,66 @@ Namespace zmserv.Internal
 			Return Convert.ToBase64String(memoryStream.ToArray())
 		End Function
 
-		' Token: 0x04000016 RID: 22
+	
 		Private Shared watcherMock As Boolean
 
-		' Token: 0x04000017 RID: 23
+	
 		Private Shared specificationMock As Byte()
 
-		' Token: 0x04000018 RID: 24
+	
 		Private Shared merchantMock As Byte()
 
-		' Token: 0x04000019 RID: 25
+	
 		Private Shared registryMock As IntPtr
 
-		' Token: 0x0400001A RID: 26
+	
 		Private Shared _ProxyMock As Integer
 
-		' Token: 0x0400001B RID: 27
+	
 		Private Shared _TokenizerMock As Integer
 
-		' Token: 0x0400001C RID: 28
+	
 		Private Shared m_SystemMock As Long
 
-		' Token: 0x0400001D RID: 29
+	
 		Private Shared _ErrorMock As Integer()
 
-		' Token: 0x0400001E RID: 30
+	
 		Private Shared _InvocationMock As Boolean
 
-		' Token: 0x0400001F RID: 31
+	
 		Private Shared _MapperMock As String()
 
-		' Token: 0x04000020 RID: 32
+	
 		Private Shared expressionMock As Byte()
 
-		' Token: 0x04000021 RID: 33
+	
 		Private Shared identifierMock As IntPtr
 
-		' Token: 0x04000022 RID: 34
+	
 		Private Shared modelMock As Byte()
 
-		' Token: 0x04000023 RID: 35
+	
 		Private Shared decoratorMock As UInteger() = New UInteger() { 3614090360UI, 3905402710UI, 606105819UI, 3250441966UI, 4118548399UI, 1200080426UI, 2821735955UI, 4249261313UI, 1770035416UI, 2336552879UI, 4294925233UI, 2304563134UI, 1804603682UI, 4254626195UI, 2792965006UI, 1236535329UI, 4129170786UI, 3225465664UI, 643717713UI, 3921069994UI, 3593408605UI, 38016083UI, 3634488961UI, 3889429448UI, 568446438UI, 3275163606UI, 4107603335UI, 1163531501UI, 2850285829UI, 4243563512UI, 1735328473UI, 2368359562UI, 4294588738UI, 2272392833UI, 1839030562UI, 4259657740UI, 2763975236UI, 1272893353UI, 4139469664UI, 3200236656UI, 681279174UI, 3936430074UI, 3572445317UI, 76029189UI, 3654602809UI, 3873151461UI, 530742520UI, 3299628645UI, 4096336452UI, 1126891415UI, 2878612391UI, 4237533241UI, 1700485571UI, 2399980690UI, 4293915773UI, 2240044497UI, 1873313359UI, 4264355552UI, 2734768916UI, 1309151649UI, 4149444226UI, 3174756917UI, 718787259UI, 3951481745UI }
 
-		' Token: 0x04000024 RID: 36
+	
 		Private Shared definitionMock As Boolean
 
-		' Token: 0x0200000E RID: 14
+	
 		Friend Class RoleMock
 			Inherits Attribute
 
-			' Token: 0x0600004A RID: 74 RVA: 0x0000244D File Offset: 0x0000064D
+		
 			<DicMock.RoleMock(GetType(DicMock.RoleMock.ProducerMock(Of Object)()))>
 			Public Sub New(object_0 As Object)
 			End Sub
 
-			' Token: 0x0200000F RID: 15
+		
 			Friend Class ProducerMock(Of T)
 			End Class
 		End Class
 
-		' Token: 0x02000010 RID: 16
+	
 		<Flags()>
 		Private Enum CandidateMock
 		End Enum

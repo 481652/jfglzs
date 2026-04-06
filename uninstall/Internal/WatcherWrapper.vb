@@ -7,9 +7,9 @@ Imports System.Security.Cryptography
 Imports System.Text
 
 Namespace uninstall.Internal
-	' Token: 0x02000012 RID: 18
+
 	Friend Class WatcherWrapper
-		' Token: 0x0600005D RID: 93 RVA: 0x00004B54 File Offset: 0x00002D54
+	
 		Shared Sub New()
 			WatcherWrapper.utilsWrapper = False
 			WatcherWrapper._ProccesorWrapper = False
@@ -27,11 +27,11 @@ Namespace uninstall.Internal
 			WatcherWrapper._IndexerWrapper = False
 		End Sub
 
-		' Token: 0x0600005E RID: 94 RVA: 0x00002545 File Offset: 0x00000745
+	
 		Private Sub method_0()
 		End Sub
 
-		' Token: 0x0600005F RID: 95 RVA: 0x00004BFC File Offset: 0x00002DFC
+	
 		Friend Shared Function CalculateConsumer(object_0 As Object) As Byte()
 			Dim array As UInteger() = New UInteger(15) {}
 			Dim num As Integer = 448 - object_0.Length * 8 Mod 512
@@ -144,32 +144,32 @@ Namespace uninstall.Internal
 			Return array4
 		End Function
 
-		' Token: 0x06000060 RID: 96 RVA: 0x00002547 File Offset: 0x00000747
+	
 		Private Shared Sub ListConsumer(ByRef uint_0 As UInteger, uint_1 As UInteger, uint_2 As UInteger, uint_3 As UInteger, uint_4 As UInteger, ushort_0 As UShort, uint_5 As UInteger, object_0 As Object)
 			uint_0 = uint_1 + WatcherWrapper.PostConsumer(uint_0 + ((uint_1 And uint_2) Or (Not uint_1 And uint_3)) + object_0(CInt(CType(uint_4, UIntPtr))) + WatcherWrapper.m_BroadcasterWrapper(CInt(CType((uint_5 - 1UI), UIntPtr))), ushort_0)
 		End Sub
 
-		' Token: 0x06000061 RID: 97 RVA: 0x00002572 File Offset: 0x00000772
+	
 		Private Shared Sub ReflectConsumer(ByRef uint_0 As UInteger, uint_1 As UInteger, uint_2 As UInteger, uint_3 As UInteger, uint_4 As UInteger, ushort_0 As UShort, uint_5 As UInteger, object_0 As Object)
 			uint_0 = uint_1 + WatcherWrapper.PostConsumer(uint_0 + ((uint_1 And uint_3) Or (uint_2 And Not uint_3)) + object_0(CInt(CType(uint_4, UIntPtr))) + WatcherWrapper.m_BroadcasterWrapper(CInt(CType((uint_5 - 1UI), UIntPtr))), ushort_0)
 		End Sub
 
-		' Token: 0x06000062 RID: 98 RVA: 0x0000259D File Offset: 0x0000079D
+	
 		Private Shared Sub SetConsumer(ByRef uint_0 As UInteger, uint_1 As UInteger, uint_2 As UInteger, uint_3 As UInteger, uint_4 As UInteger, ushort_0 As UShort, uint_5 As UInteger, object_0 As Object)
 			uint_0 = uint_1 + WatcherWrapper.PostConsumer(uint_0 + (uint_1 Xor uint_2 Xor uint_3) + object_0(CInt(CType(uint_4, UIntPtr))) + WatcherWrapper.m_BroadcasterWrapper(CInt(CType((uint_5 - 1UI), UIntPtr))), ushort_0)
 		End Sub
 
-		' Token: 0x06000063 RID: 99 RVA: 0x000025C5 File Offset: 0x000007C5
+	
 		Private Shared Sub RunConsumer(ByRef uint_0 As UInteger, uint_1 As UInteger, uint_2 As UInteger, uint_3 As UInteger, uint_4 As UInteger, ushort_0 As UShort, uint_5 As UInteger, object_0 As Object)
 			uint_0 = uint_1 + WatcherWrapper.PostConsumer(uint_0 + (uint_2 Xor (uint_1 Or Not uint_3)) + object_0(CInt(CType(uint_4, UIntPtr))) + WatcherWrapper.m_BroadcasterWrapper(CInt(CType((uint_5 - 1UI), UIntPtr))), ushort_0)
 		End Sub
 
-		' Token: 0x06000064 RID: 100 RVA: 0x000025EE File Offset: 0x000007EE
+	
 		Private Shared Function PostConsumer(uint_0 As UInteger, ushort_0 As UShort) As UInteger
 			Return uint_0 >> CInt((32US - ushort_0)) Or uint_0 << CInt(ushort_0)
 		End Function
 
-		' Token: 0x06000065 RID: 101 RVA: 0x00002600 File Offset: 0x00000800
+	
 		Friend Shared Function PrintConsumer() As Boolean
 			If Not WatcherWrapper.utilsWrapper Then
 				WatcherWrapper.MapConsumer()
@@ -178,7 +178,7 @@ Namespace uninstall.Internal
 			Return WatcherWrapper._ProccesorWrapper
 		End Function
 
-		' Token: 0x06000066 RID: 102 RVA: 0x000052A0 File Offset: 0x000034A0
+	
 		Friend Shared Sub MapConsumer()
 			Try
 				WatcherWrapper._ProccesorWrapper = CBool(GetType(RijndaelManaged).Assembly.[GetType]("System.Security.Cryptography.CryptoConfig", False).GetMethod("get_AllowOnlyFipsAlgorithms", BindingFlags.[Static] Or BindingFlags.[Public]).Invoke(Nothing, New Object(-1) {}))
@@ -186,7 +186,7 @@ Namespace uninstall.Internal
 			End Try
 		End Sub
 
-		' Token: 0x06000067 RID: 103 RVA: 0x00005300 File Offset: 0x00003500
+	
 		Friend Shared Function LogoutConsumer() As SymmetricAlgorithm
 			Dim result As SymmetricAlgorithm = Nothing
 			If WatcherWrapper.PrintConsumer() Then
@@ -200,7 +200,7 @@ Namespace uninstall.Internal
 			Return result
 		End Function
 
-		' Token: 0x06000068 RID: 104 RVA: 0x00002619 File Offset: 0x00000819
+	
 		Friend Shared Function RestartConsumer(byte_0 As Byte()) As Byte()
 			If Not WatcherWrapper.PrintConsumer() Then
 				Return New MD5CryptoServiceProvider().ComputeHash(byte_0)
@@ -208,7 +208,7 @@ Namespace uninstall.Internal
 			Return WatcherWrapper.CalculateConsumer(byte_0)
 		End Function
 
-		' Token: 0x06000069 RID: 105 RVA: 0x00005340 File Offset: 0x00003540
+	
 		Shared Function DestroyConsumer(int_0 As Integer) As Boolean
 			If WatcherWrapper.m_PredicateWrapper.Length = 0 Then
 				Dim binaryReader As BinaryReader = New BinaryReader(GetType(WatcherWrapper).Assembly.GetManifestResourceStream("80bf5fac-f0b4-4952-bc21-bd021e3fec32"))
@@ -479,7 +479,7 @@ Namespace uninstall.Internal
 			Return False
 		End Function
 
-		' Token: 0x0600006A RID: 106 RVA: 0x00005E88 File Offset: 0x00004088
+	
 		Shared Function RemoveConsumer(int_0 As Integer) As String
 			If WatcherWrapper._ClassWrapper.Length = 0 Then
 				Dim binaryReader As BinaryReader = New BinaryReader(GetType(WatcherWrapper).Assembly.GetManifestResourceStream("3a200808-4450-425b-a8e3-7481260ad564"))
@@ -805,7 +805,7 @@ Namespace uninstall.Internal
 			Return ""
 		End Function
 
-		' Token: 0x0600006B RID: 107 RVA: 0x00006BD8 File Offset: 0x00004DD8
+	
 		Shared Function EnableConsumer(int_0 As Integer) As String
 			If WatcherWrapper._StructWrapper.Length = 0 Then
 				Dim binaryReader As BinaryReader = New BinaryReader(GetType(WatcherWrapper).Assembly.GetManifestResourceStream("3a200808-4450-425b-a8e3-7481260ad564"))
@@ -1160,16 +1160,16 @@ Namespace uninstall.Internal
 			Return [string]
 		End Function
 
-		' Token: 0x0600006C RID: 108 RVA: 0x00007A5C File Offset: 0x00005C5C
+	
 		Friend Shared Function ExcludeConsumer(string_0 As String) As String
 			Dim array As Byte() = Convert.FromBase64String(string_0)
 			Return Encoding.Unicode.GetString(array, 0, array.Length)
 		End Function
 
-		' Token: 0x0600006D RID: 109
+	
 		Private Declare Function VirtualProtect Lib "kernel32.dll" (intptr_0 As IntPtr, int_0 As Integer, int_1 As Integer, ByRef int_2 As Integer) As Integer
 
-		' Token: 0x0600006E RID: 110 RVA: 0x00007A80 File Offset: 0x00005C80
+	
 		<WatcherWrapper.InstanceWrapper(GetType(WatcherWrapper.InstanceWrapper.TaskWrapper(Of Object)()))>
 		Shared Sub LoginConsumer()
 			If Not WatcherWrapper._IndexerWrapper Then
@@ -1539,7 +1539,7 @@ Namespace uninstall.Internal
 			End If
 		End Sub
 
-		' Token: 0x0600006F RID: 111 RVA: 0x00008AA0 File Offset: 0x00006CA0
+	
 		Friend Shared Function InvokeConsumer(assembly_0 As Assembly) As Object
 			Try
 				If File.Exists(CType(assembly_0, Assembly).Location) Then
@@ -1562,19 +1562,19 @@ Namespace uninstall.Internal
 			Return ""
 		End Function
 
-		' Token: 0x06000070 RID: 112
+	
 		Private Declare Function WriteProcessMemory Lib "kernel32.dll" (intptr_0 As IntPtr, intptr_1 As IntPtr, <[In]()> <Out()> byte_0 As Byte(), uint_0 As UInteger, <System.Runtime.InteropServices.OutAttribute()> ByRef intptr_2 As IntPtr) As Integer
 
-		' Token: 0x06000071 RID: 113
+	
 		Private Declare Function ReadProcessMemory Lib "kernel32.dll" (intptr_0 As IntPtr, intptr_1 As IntPtr, <[In]()> <Out()> byte_0 As Byte(), uint_0 As UInteger, <System.Runtime.InteropServices.OutAttribute()> ByRef intptr_2 As IntPtr) As Integer
 
-		' Token: 0x06000072 RID: 114
+	
 		Private Declare Function OpenProcess Lib "kernel32.dll" (uint_0 As UInteger, int_0 As Integer, uint_1 As UInteger) As IntPtr
 
-		' Token: 0x06000073 RID: 115
+	
 		Private Declare Function CloseHandle Lib "kernel32.dll" (intptr_0 As IntPtr) As Integer
 
-		' Token: 0x06000074 RID: 116 RVA: 0x00008BB0 File Offset: 0x00006DB0
+	
 		Private Shared Function RevertConsumer(string_0 As String) As Byte()
 			Dim array As Byte()
 			Using fileStream As FileStream = New FileStream(string_0, FileMode.Open, FileAccess.Read, FileShare.Read)
@@ -1591,7 +1591,7 @@ Namespace uninstall.Internal
 			Return array
 		End Function
 
-		' Token: 0x06000075 RID: 117 RVA: 0x00008C18 File Offset: 0x00006E18
+	
 		Private Shared Function FindWrapper(byte_0 As Byte()) As Byte()
 			Dim memoryStream As MemoryStream = New MemoryStream()
 			Dim symmetricAlgorithm As SymmetricAlgorithm = WatcherWrapper.LogoutConsumer()
@@ -1603,37 +1603,37 @@ Namespace uninstall.Internal
 			Return memoryStream.ToArray()
 		End Function
 
-		' Token: 0x06000076 RID: 118 RVA: 0x00002634 File Offset: 0x00000834
+	
 		Private Function DeleteWrapper() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x06000077 RID: 119 RVA: 0x00002634 File Offset: 0x00000834
+	
 		Private Function CountWrapper() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x06000078 RID: 120 RVA: 0x00002634 File Offset: 0x00000834
+	
 		Private Function CustomizeWrapper() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x06000079 RID: 121 RVA: 0x00002634 File Offset: 0x00000834
+	
 		Private Function CollectWrapper() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x0600007A RID: 122 RVA: 0x00002634 File Offset: 0x00000834
+	
 		Private Function StartWrapper() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x0600007B RID: 123 RVA: 0x00002634 File Offset: 0x00000834
+	
 		Private Function VisitWrapper() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x0600007C RID: 124 RVA: 0x00008C88 File Offset: 0x00006E88
+	
 		Friend Function PopWrapper() As Byte()
 			Dim text As String = "{11111-22222-40001-00001}"
 			If text.Length > 0 Then
@@ -1642,7 +1642,7 @@ Namespace uninstall.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x0600007D RID: 125 RVA: 0x00008CC8 File Offset: 0x00006EC8
+	
 		Friend Function ResetWrapper() As Byte()
 			Dim text As String = "{11111-22222-40001-00002}"
 			If text.Length > 0 Then
@@ -1651,7 +1651,7 @@ Namespace uninstall.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x0600007E RID: 126 RVA: 0x00008D08 File Offset: 0x00006F08
+	
 		Friend Function VerifyWrapper() As Byte()
 			Dim text As String = "{11111-22222-50001-00001}"
 			If text.Length > 0 Then
@@ -1660,7 +1660,7 @@ Namespace uninstall.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x0600007F RID: 127 RVA: 0x00008D48 File Offset: 0x00006F48
+	
 		Friend Function ResolveWrapper() As Byte()
 			Dim text As String = "{11111-22222-50001-00002}"
 			If text.Length > 0 Then
@@ -1669,7 +1669,7 @@ Namespace uninstall.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x06000080 RID: 128 RVA: 0x00008D88 File Offset: 0x00006F88
+	
 		Friend Function CallWrapper() As Byte()
 			Dim text As String = "{11111-22222-60001-00001}"
 			If text.Length > 0 Then
@@ -1678,7 +1678,7 @@ Namespace uninstall.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x06000081 RID: 129 RVA: 0x00008DC8 File Offset: 0x00006FC8
+	
 		Friend Function ReadWrapper() As Byte()
 			Dim text As String = "{11111-22222-60001-00002}"
 			If text.Length > 0 Then
@@ -1687,7 +1687,7 @@ Namespace uninstall.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x06000082 RID: 130 RVA: 0x00008E08 File Offset: 0x00007008
+	
 		Friend Shared Function CloneWrapper(string_0 As String, string_1 As String) As String
 			Dim bytes As Byte() = Encoding.Unicode.GetBytes(string_0)
 			Dim array As Byte() = bytes
@@ -1703,66 +1703,66 @@ Namespace uninstall.Internal
 			Return Convert.ToBase64String(memoryStream.ToArray())
 		End Function
 
-		' Token: 0x04000031 RID: 49
+	
 		Private Shared utilsWrapper As Boolean
 
-		' Token: 0x04000032 RID: 50
+	
 		Private Shared _ProccesorWrapper As Boolean
 
-		' Token: 0x04000033 RID: 51
+	
 		Private Shared annotationWrapper As Byte()
 
-		' Token: 0x04000034 RID: 52
+	
 		Private Shared interceptorWrapper As Integer
 
-		' Token: 0x04000035 RID: 53
+	
 		Private Shared _IndexerWrapper As Boolean
 
-		' Token: 0x04000036 RID: 54
+	
 		Private Shared _AttrWrapper As Integer()
 
-		' Token: 0x04000037 RID: 55
+	
 		Private Shared _StructWrapper As Byte()
 
-		' Token: 0x04000038 RID: 56
+	
 		Private Shared pageWrapper As String()
 
-		' Token: 0x04000039 RID: 57
+	
 		Private Shared m_SchemaWrapper As Long
 
-		' Token: 0x0400003A RID: 58
+	
 		Private Shared observerWrapper As IntPtr
 
-		' Token: 0x0400003B RID: 59
+	
 		Private Shared m_DescriptorWrapper As Integer
 
-		' Token: 0x0400003C RID: 60
+	
 		Private Shared _RoleWrapper As IntPtr
 
-		' Token: 0x0400003D RID: 61
+	
 		Private Shared _ClassWrapper As Byte()
 
-		' Token: 0x0400003E RID: 62
+	
 		Private Shared m_BroadcasterWrapper As UInteger() = New UInteger() { 3614090360UI, 3905402710UI, 606105819UI, 3250441966UI, 4118548399UI, 1200080426UI, 2821735955UI, 4249261313UI, 1770035416UI, 2336552879UI, 4294925233UI, 2304563134UI, 1804603682UI, 4254626195UI, 2792965006UI, 1236535329UI, 4129170786UI, 3225465664UI, 643717713UI, 3921069994UI, 3593408605UI, 38016083UI, 3634488961UI, 3889429448UI, 568446438UI, 3275163606UI, 4107603335UI, 1163531501UI, 2850285829UI, 4243563512UI, 1735328473UI, 2368359562UI, 4294588738UI, 2272392833UI, 1839030562UI, 4259657740UI, 2763975236UI, 1272893353UI, 4139469664UI, 3200236656UI, 681279174UI, 3936430074UI, 3572445317UI, 76029189UI, 3654602809UI, 3873151461UI, 530742520UI, 3299628645UI, 4096336452UI, 1126891415UI, 2878612391UI, 4237533241UI, 1700485571UI, 2399980690UI, 4293915773UI, 2240044497UI, 1873313359UI, 4264355552UI, 2734768916UI, 1309151649UI, 4149444226UI, 3174756917UI, 718787259UI, 3951481745UI }
 
-		' Token: 0x0400003F RID: 63
+	
 		Private Shared m_PredicateWrapper As Byte()
 
-		' Token: 0x02000013 RID: 19
+	
 		Friend Class InstanceWrapper
 			Inherits Attribute
 
-			' Token: 0x06000084 RID: 132 RVA: 0x00002637 File Offset: 0x00000837
+		
 			<WatcherWrapper.InstanceWrapper(GetType(WatcherWrapper.InstanceWrapper.TaskWrapper(Of Object)()))>
 			Public Sub New(object_0 As Object)
 			End Sub
 
-			' Token: 0x02000014 RID: 20
+		
 			Friend Class TaskWrapper(Of T)
 			End Class
 		End Class
 
-		' Token: 0x02000015 RID: 21
+	
 		<Flags()>
 		Private Enum VisitorWrapper
 		End Enum

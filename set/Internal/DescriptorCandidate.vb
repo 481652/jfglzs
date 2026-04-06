@@ -7,9 +7,9 @@ Imports System.Text
 Imports System.Threading
 
 Namespace [set].Internal
-	' Token: 0x02000018 RID: 24
+
 	Friend Class DescriptorCandidate
-		' Token: 0x06000117 RID: 279 RVA: 0x0000F558 File Offset: 0x0000D758
+	
 		Friend Shared Sub smethod_0()
 			If Not DescriptorCandidate.methodCandidate Then
 				DescriptorCandidate.methodCandidate = True
@@ -18,7 +18,7 @@ Namespace [set].Internal
 			End If
 		End Sub
 
-		' Token: 0x06000118 RID: 280 RVA: 0x0000F58C File Offset: 0x0000D78C
+	
 		Private Shared Function ValidateCollection(object_0 As Object, resolveEventArgs_0 As ResolveEventArgs) As Assembly
 			Dim flag As Boolean = False
 			Dim result As Assembly
@@ -84,7 +84,7 @@ Namespace [set].Internal
 			Return result
 		End Function
 
-		' Token: 0x06000119 RID: 281 RVA: 0x0000F7A4 File Offset: 0x0000D9A4
+	
 		Private Shared Function ManageCollection(string_0 As String) As String
 			Dim text As String = string_0.Trim()
 			Dim num As Integer = text.IndexOf(","c)
@@ -94,10 +94,10 @@ Namespace [set].Internal
 			Return text
 		End Function
 
-		' Token: 0x04000086 RID: 134
+	
 		Private Shared m_ConsumerCandidate As Hashtable = New Hashtable()
 
-		' Token: 0x04000087 RID: 135
+	
 		Private Shared methodCandidate As Boolean = False
 	End Class
 End Namespace

@@ -7,9 +7,9 @@ Imports System.Security.Cryptography
 Imports System.Text
 
 Namespace WindowsApplication1.Internal
-	' Token: 0x02000015 RID: 21
+
 	Friend Class ServerToken
-		' Token: 0x060000C5 RID: 197 RVA: 0x000092A8 File Offset: 0x000074A8
+	
 		Shared Sub New()
 			ServerToken.mapToken = False
 			ServerToken.repositoryToken = New Byte(-1) {}
@@ -26,11 +26,11 @@ Namespace WindowsApplication1.Internal
 			ServerToken.m_IndexerToken = False
 		End Sub
 
-		' Token: 0x060000C6 RID: 198 RVA: 0x00002730 File Offset: 0x00000930
+	
 		Private Sub method_0()
 		End Sub
 
-		' Token: 0x060000C7 RID: 199 RVA: 0x00009350 File Offset: 0x00007550
+	
 		Friend Shared Function StopStatus(object_0 As Object) As Byte()
 			Dim array As UInteger() = New UInteger(15) {}
 			Dim num As Integer = 448 - object_0.Length * 8 Mod 512
@@ -143,32 +143,32 @@ Namespace WindowsApplication1.Internal
 			Return array4
 		End Function
 
-		' Token: 0x060000C8 RID: 200 RVA: 0x00002732 File Offset: 0x00000932
+	
 		Private Shared Sub InitStatus(ByRef uint_0 As UInteger, uint_1 As UInteger, uint_2 As UInteger, uint_3 As UInteger, uint_4 As UInteger, ushort_0 As UShort, uint_5 As UInteger, object_0 As Object)
 			uint_0 = uint_1 + ServerToken.ValidateStatus(uint_0 + ((uint_1 And uint_2) Or (Not uint_1 And uint_3)) + object_0(CInt(CType(uint_4, UIntPtr))) + ServerToken.getterToken(CInt(CType((uint_5 - 1UI), UIntPtr))), ushort_0)
 		End Sub
 
-		' Token: 0x060000C9 RID: 201 RVA: 0x0000275D File Offset: 0x0000095D
+	
 		Private Shared Sub ConnectStatus(ByRef uint_0 As UInteger, uint_1 As UInteger, uint_2 As UInteger, uint_3 As UInteger, uint_4 As UInteger, ushort_0 As UShort, uint_5 As UInteger, object_0 As Object)
 			uint_0 = uint_1 + ServerToken.ValidateStatus(uint_0 + ((uint_1 And uint_3) Or (uint_2 And Not uint_3)) + object_0(CInt(CType(uint_4, UIntPtr))) + ServerToken.getterToken(CInt(CType((uint_5 - 1UI), UIntPtr))), ushort_0)
 		End Sub
 
-		' Token: 0x060000CA RID: 202 RVA: 0x00002788 File Offset: 0x00000988
+	
 		Private Shared Sub RemoveStatus(ByRef uint_0 As UInteger, uint_1 As UInteger, uint_2 As UInteger, uint_3 As UInteger, uint_4 As UInteger, ushort_0 As UShort, uint_5 As UInteger, object_0 As Object)
 			uint_0 = uint_1 + ServerToken.ValidateStatus(uint_0 + (uint_1 Xor uint_2 Xor uint_3) + object_0(CInt(CType(uint_4, UIntPtr))) + ServerToken.getterToken(CInt(CType((uint_5 - 1UI), UIntPtr))), ushort_0)
 		End Sub
 
-		' Token: 0x060000CB RID: 203 RVA: 0x000027B0 File Offset: 0x000009B0
+	
 		Private Shared Sub CompareStatus(ByRef uint_0 As UInteger, uint_1 As UInteger, uint_2 As UInteger, uint_3 As UInteger, uint_4 As UInteger, ushort_0 As UShort, uint_5 As UInteger, object_0 As Object)
 			uint_0 = uint_1 + ServerToken.ValidateStatus(uint_0 + (uint_2 Xor (uint_1 Or Not uint_3)) + object_0(CInt(CType(uint_4, UIntPtr))) + ServerToken.getterToken(CInt(CType((uint_5 - 1UI), UIntPtr))), ushort_0)
 		End Sub
 
-		' Token: 0x060000CC RID: 204 RVA: 0x000027D9 File Offset: 0x000009D9
+	
 		Private Shared Function ValidateStatus(uint_0 As UInteger, ushort_0 As UShort) As UInteger
 			Return uint_0 >> CInt((32US - ushort_0)) Or uint_0 << CInt(ushort_0)
 		End Function
 
-		' Token: 0x060000CD RID: 205 RVA: 0x000027EB File Offset: 0x000009EB
+	
 		Friend Shared Function SortStatus() As Boolean
 			If Not ServerToken.m_PropertyToken Then
 				ServerToken.ResolveStatus()
@@ -177,7 +177,7 @@ Namespace WindowsApplication1.Internal
 			Return ServerToken.mapToken
 		End Function
 
-		' Token: 0x060000CE RID: 206 RVA: 0x000099F4 File Offset: 0x00007BF4
+	
 		Friend Shared Sub ResolveStatus()
 			Try
 				ServerToken.mapToken = CBool(GetType(RijndaelManaged).Assembly.[GetType]("System.Security.Cryptography.CryptoConfig", False).GetMethod("get_AllowOnlyFipsAlgorithms", BindingFlags.[Static] Or BindingFlags.[Public]).Invoke(Nothing, New Object(-1) {}))
@@ -185,7 +185,7 @@ Namespace WindowsApplication1.Internal
 			End Try
 		End Sub
 
-		' Token: 0x060000CF RID: 207 RVA: 0x00009A54 File Offset: 0x00007C54
+	
 		Friend Shared Function ExcludeStatus() As SymmetricAlgorithm
 			Dim result As SymmetricAlgorithm = Nothing
 			If ServerToken.SortStatus() Then
@@ -199,7 +199,7 @@ Namespace WindowsApplication1.Internal
 			Return result
 		End Function
 
-		' Token: 0x060000D0 RID: 208 RVA: 0x00002804 File Offset: 0x00000A04
+	
 		Friend Shared Function CheckStatus(byte_0 As Byte()) As Byte()
 			If Not ServerToken.SortStatus() Then
 				Return New MD5CryptoServiceProvider().ComputeHash(byte_0)
@@ -207,7 +207,7 @@ Namespace WindowsApplication1.Internal
 			Return ServerToken.StopStatus(byte_0)
 		End Function
 
-		' Token: 0x060000D1 RID: 209 RVA: 0x00009A94 File Offset: 0x00007C94
+	
 		Shared Function InstantiateStatus(int_0 As Integer) As Boolean
 			If ServerToken.m_AccountToken.Length = 0 Then
 				Dim binaryReader As BinaryReader = New BinaryReader(GetType(ServerToken).Assembly.GetManifestResourceStream("22417a8b-1725-466b-a0be-8658beeef10b"))
@@ -481,7 +481,7 @@ Namespace WindowsApplication1.Internal
 			Return False
 		End Function
 
-		' Token: 0x060000D2 RID: 210 RVA: 0x0000A610 File Offset: 0x00008810
+	
 		Shared Function InsertStatus(int_0 As Integer) As String
 			If ServerToken.classToken.Length = 0 Then
 				Dim binaryReader As BinaryReader = New BinaryReader(GetType(ServerToken).Assembly.GetManifestResourceStream("a6f3c99d-eab0-45af-8f4a-79ba5e4091ed"))
@@ -817,7 +817,7 @@ Namespace WindowsApplication1.Internal
 			Return ""
 		End Function
 
-		' Token: 0x060000D3 RID: 211 RVA: 0x0000B430 File Offset: 0x00009630
+	
 		Shared Function DefineStatus(int_0 As Integer) As String
 			If ServerToken._ProductToken.Length = 0 Then
 				Dim binaryReader As BinaryReader = New BinaryReader(GetType(ServerToken).Assembly.GetManifestResourceStream("a6f3c99d-eab0-45af-8f4a-79ba5e4091ed"))
@@ -1182,16 +1182,16 @@ Namespace WindowsApplication1.Internal
 			Return [string]
 		End Function
 
-		' Token: 0x060000D4 RID: 212 RVA: 0x0000C370 File Offset: 0x0000A570
+	
 		Friend Shared Function NewStatus(string_0 As String) As String
 			Dim array As Byte() = Convert.FromBase64String(string_0)
 			Return Encoding.Unicode.GetString(array, 0, array.Length)
 		End Function
 
-		' Token: 0x060000D5 RID: 213
+	
 		Private Declare Function VirtualProtect Lib "kernel32.dll" (intptr_0 As IntPtr, int_0 As Integer, int_1 As Integer, ByRef int_2 As Integer) As Integer
 
-		' Token: 0x060000D6 RID: 214 RVA: 0x0000C394 File Offset: 0x0000A594
+	
 		<ServerToken.CollectionToken(GetType(ServerToken.CollectionToken.BridgeToken(Of Object)()))>
 		Shared Sub CreateStatus()
 			If Not ServerToken.m_IndexerToken Then
@@ -1560,7 +1560,7 @@ Namespace WindowsApplication1.Internal
 			End If
 		End Sub
 
-		' Token: 0x060000D7 RID: 215 RVA: 0x0000D370 File Offset: 0x0000B570
+	
 		Friend Shared Function AssetStatus(assembly_0 As Assembly) As Object
 			Try
 				If File.Exists(CType(assembly_0, Assembly).Location) Then
@@ -1583,19 +1583,19 @@ Namespace WindowsApplication1.Internal
 			Return ""
 		End Function
 
-		' Token: 0x060000D8 RID: 216
+	
 		Private Declare Function WriteProcessMemory Lib "kernel32.dll" (intptr_0 As IntPtr, intptr_1 As IntPtr, <[In]()> <Out()> byte_0 As Byte(), uint_0 As UInteger, <System.Runtime.InteropServices.OutAttribute()> ByRef intptr_2 As IntPtr) As Integer
 
-		' Token: 0x060000D9 RID: 217
+	
 		Private Declare Function ReadProcessMemory Lib "kernel32.dll" (intptr_0 As IntPtr, intptr_1 As IntPtr, <[In]()> <Out()> byte_0 As Byte(), uint_0 As UInteger, <System.Runtime.InteropServices.OutAttribute()> ByRef intptr_2 As IntPtr) As Integer
 
-		' Token: 0x060000DA RID: 218
+	
 		Private Declare Function OpenProcess Lib "kernel32.dll" (uint_0 As UInteger, int_0 As Integer, uint_1 As UInteger) As IntPtr
 
-		' Token: 0x060000DB RID: 219
+	
 		Private Declare Function CloseHandle Lib "kernel32.dll" (intptr_0 As IntPtr) As Integer
 
-		' Token: 0x060000DC RID: 220 RVA: 0x0000D480 File Offset: 0x0000B680
+	
 		Private Shared Function CalculateStatus(string_0 As String) As Byte()
 			Dim array As Byte()
 			Using fileStream As FileStream = New FileStream(string_0, FileMode.Open, FileAccess.Read, FileShare.Read)
@@ -1612,7 +1612,7 @@ Namespace WindowsApplication1.Internal
 			Return array
 		End Function
 
-		' Token: 0x060000DD RID: 221 RVA: 0x0000D4E8 File Offset: 0x0000B6E8
+	
 		Private Shared Function QueryStatus(byte_0 As Byte()) As Byte()
 			Dim memoryStream As MemoryStream = New MemoryStream()
 			Dim symmetricAlgorithm As SymmetricAlgorithm = ServerToken.ExcludeStatus()
@@ -1624,37 +1624,37 @@ Namespace WindowsApplication1.Internal
 			Return memoryStream.ToArray()
 		End Function
 
-		' Token: 0x060000DE RID: 222 RVA: 0x0000281F File Offset: 0x00000A1F
+	
 		Private Function EnableStatus() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x060000DF RID: 223 RVA: 0x0000281F File Offset: 0x00000A1F
+	
 		Private Function ReflectStatus() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x060000E0 RID: 224 RVA: 0x0000281F File Offset: 0x00000A1F
+	
 		Private Function RunStatus() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x060000E1 RID: 225 RVA: 0x0000281F File Offset: 0x00000A1F
+	
 		Private Function ChangeStatus() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x060000E2 RID: 226 RVA: 0x0000281F File Offset: 0x00000A1F
+	
 		Private Function GetStatus() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x060000E3 RID: 227 RVA: 0x0000281F File Offset: 0x00000A1F
+	
 		Private Function IncludeStatus() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x060000E4 RID: 228 RVA: 0x0000D558 File Offset: 0x0000B758
+	
 		Friend Function CallStatus() As Byte()
 			Dim text As String = "{11111-22222-40001-00001}"
 			If text.Length > 0 Then
@@ -1663,7 +1663,7 @@ Namespace WindowsApplication1.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x060000E5 RID: 229 RVA: 0x0000D598 File Offset: 0x0000B798
+	
 		Friend Function SetupStatus() As Byte()
 			Dim text As String = "{11111-22222-40001-00002}"
 			If text.Length > 0 Then
@@ -1672,7 +1672,7 @@ Namespace WindowsApplication1.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x060000E6 RID: 230 RVA: 0x0000D5D8 File Offset: 0x0000B7D8
+	
 		Friend Function FlushStatus() As Byte()
 			Dim text As String = "{11111-22222-50001-00001}"
 			If text.Length > 0 Then
@@ -1681,7 +1681,7 @@ Namespace WindowsApplication1.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x060000E7 RID: 231 RVA: 0x0000D618 File Offset: 0x0000B818
+	
 		Friend Function CollectStatus() As Byte()
 			Dim text As String = "{11111-22222-50001-00002}"
 			If text.Length > 0 Then
@@ -1690,7 +1690,7 @@ Namespace WindowsApplication1.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x060000E8 RID: 232 RVA: 0x0000D658 File Offset: 0x0000B858
+	
 		Friend Function RestartStatus() As Byte()
 			Dim text As String = "{11111-22222-60001-00001}"
 			If text.Length > 0 Then
@@ -1699,7 +1699,7 @@ Namespace WindowsApplication1.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x060000E9 RID: 233 RVA: 0x0000D698 File Offset: 0x0000B898
+	
 		Friend Function PrintStatus() As Byte()
 			Dim text As String = "{11111-22222-60001-00002}"
 			If text.Length > 0 Then
@@ -1708,7 +1708,7 @@ Namespace WindowsApplication1.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x060000EA RID: 234 RVA: 0x0000D6D8 File Offset: 0x0000B8D8
+	
 		Friend Shared Function CancelStatus(string_0 As String, string_1 As String) As String
 			Dim bytes As Byte() = Encoding.Unicode.GetBytes(string_0)
 			Dim array As Byte() = bytes
@@ -1724,66 +1724,66 @@ Namespace WindowsApplication1.Internal
 			Return Convert.ToBase64String(memoryStream.ToArray())
 		End Function
 
-		' Token: 0x040000B0 RID: 176
+	
 		Private Shared mapToken As Boolean
 
-		' Token: 0x040000B1 RID: 177
+	
 		Private Shared m_AccountToken As Byte()
 
-		' Token: 0x040000B2 RID: 178
+	
 		Private Shared _RegistryToken As IntPtr
 
-		' Token: 0x040000B3 RID: 179
+	
 		Private Shared predicateToken As String()
 
-		' Token: 0x040000B4 RID: 180
+	
 		Private Shared m_IndexerToken As Boolean
 
-		' Token: 0x040000B5 RID: 181
+	
 		Private Shared _RefToken As Long
 
-		' Token: 0x040000B6 RID: 182
+	
 		Private Shared getterToken As UInteger() = New UInteger() { 3614090360UI, 3905402710UI, 606105819UI, 3250441966UI, 4118548399UI, 1200080426UI, 2821735955UI, 4249261313UI, 1770035416UI, 2336552879UI, 4294925233UI, 2304563134UI, 1804603682UI, 4254626195UI, 2792965006UI, 1236535329UI, 4129170786UI, 3225465664UI, 643717713UI, 3921069994UI, 3593408605UI, 38016083UI, 3634488961UI, 3889429448UI, 568446438UI, 3275163606UI, 4107603335UI, 1163531501UI, 2850285829UI, 4243563512UI, 1735328473UI, 2368359562UI, 4294588738UI, 2272392833UI, 1839030562UI, 4259657740UI, 2763975236UI, 1272893353UI, 4139469664UI, 3200236656UI, 681279174UI, 3936430074UI, 3572445317UI, 76029189UI, 3654602809UI, 3873151461UI, 530742520UI, 3299628645UI, 4096336452UI, 1126891415UI, 2878612391UI, 4237533241UI, 1700485571UI, 2399980690UI, 4293915773UI, 2240044497UI, 1873313359UI, 4264355552UI, 2734768916UI, 1309151649UI, 4149444226UI, 3174756917UI, 718787259UI, 3951481745UI }
 
-		' Token: 0x040000B7 RID: 183
+	
 		Private Shared repositoryToken As Byte()
 
-		' Token: 0x040000B8 RID: 184
+	
 		Private Shared _PoolToken As Integer
 
-		' Token: 0x040000B9 RID: 185
+	
 		Private Shared _DicToken As IntPtr
 
-		' Token: 0x040000BA RID: 186
+	
 		Private Shared _ProductToken As Byte()
 
-		' Token: 0x040000BB RID: 187
+	
 		Private Shared orderToken As Integer
 
-		' Token: 0x040000BC RID: 188
+	
 		Private Shared m_PropertyToken As Boolean = False
 
-		' Token: 0x040000BD RID: 189
+	
 		Private Shared m_AnnotationToken As Integer()
 
-		' Token: 0x040000BE RID: 190
+	
 		Private Shared classToken As Byte()
 
-		' Token: 0x02000016 RID: 22
+	
 		Friend Class CollectionToken
 			Inherits Attribute
 
-			' Token: 0x060000EC RID: 236 RVA: 0x00002822 File Offset: 0x00000A22
+		
 			<ServerToken.CollectionToken(GetType(ServerToken.CollectionToken.BridgeToken(Of Object)()))>
 			Public Sub New(object_0 As Object)
 			End Sub
 
-			' Token: 0x02000017 RID: 23
+		
 			Friend Class BridgeToken(Of T)
 			End Class
 		End Class
 
-		' Token: 0x02000018 RID: 24
+	
 		<Flags()>
 		Private Enum InstanceNameTruncOptions
 		End Enum

@@ -11,12 +11,10 @@ Imports Microsoft.VisualBasic.CompilerServices
 Public Partial Class Form3
 	Inherits Form
 
-	' Token: 0x06000078 RID: 120 RVA: 0x0000265A File Offset: 0x0000085A
 	Public Sub New()
 		Me.ConcatAttribute()
 	End Sub
 
-	' Token: 0x0600007A RID: 122 RVA: 0x000063C8 File Offset: 0x000045C8
 	<DebuggerStepThrough()>
 	Private Sub ConcatAttribute()
 		Me.shuoming2 = New Label()
@@ -59,32 +57,26 @@ Public Partial Class Form3
 		MyBase.PerformLayout()
 	End Sub
 
-	' Token: 0x17000024 RID: 36
 	' (get) Token: 0x0600007B RID: 123 RVA: 0x00002668 File Offset: 0x00000868
 	' (set) Token: 0x0600007C RID: 124 RVA: 0x00002670 File Offset: 0x00000870
 	Friend Overridable Property shuoming2 As Label
 
-	' Token: 0x17000025 RID: 37
 	' (get) Token: 0x0600007D RID: 125 RVA: 0x00002679 File Offset: 0x00000879
 	' (set) Token: 0x0600007E RID: 126 RVA: 0x00002681 File Offset: 0x00000881
 	Friend Overridable Property shuoming As Label
 
-	' Token: 0x17000026 RID: 38
 	' (get) Token: 0x0600007F RID: 127 RVA: 0x0000268A File Offset: 0x0000088A
 	' (set) Token: 0x06000080 RID: 128 RVA: 0x00002692 File Offset: 0x00000892
 	Friend Overridable Property shuoming3 As Label
 
-	' Token: 0x04000042 RID: 66
 	<CompilerGenerated()>
 	<AccessedThroughProperty("shuoming2")>
 	Private m_Stub As Label
 
-	' Token: 0x04000043 RID: 67
 	<AccessedThroughProperty("shuoming")>
 	<CompilerGenerated()>
 	Private _Interceptor As Label
 
-	' Token: 0x04000044 RID: 68
 	<CompilerGenerated()>
 	<AccessedThroughProperty("shuoming3")>
 	Private authentication As Label

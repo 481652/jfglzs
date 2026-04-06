@@ -7,9 +7,9 @@ Imports System.Text
 Imports System.Threading
 
 Namespace uninstall.Internal
-	' Token: 0x02000017 RID: 23
+
 	Friend Class ComparatorWrapper
-		' Token: 0x06000089 RID: 137 RVA: 0x00008EE4 File Offset: 0x000070E4
+	
 		Friend Shared Sub smethod_0()
 			If Not ComparatorWrapper._SingletonWrapper Then
 				ComparatorWrapper._SingletonWrapper = True
@@ -18,7 +18,7 @@ Namespace uninstall.Internal
 			End If
 		End Sub
 
-		' Token: 0x0600008A RID: 138 RVA: 0x00008F18 File Offset: 0x00007118
+	
 		Private Shared Function WriteWrapper(object_0 As Object, resolveEventArgs_0 As ResolveEventArgs) As Assembly
 			Dim flag As Boolean = False
 			Dim result As Assembly
@@ -84,7 +84,7 @@ Namespace uninstall.Internal
 			Return result
 		End Function
 
-		' Token: 0x0600008B RID: 139 RVA: 0x00009130 File Offset: 0x00007330
+	
 		Private Shared Function NewWrapper(string_0 As String) As String
 			Dim text As String = string_0.Trim()
 			Dim num As Integer = text.IndexOf(","c)
@@ -94,10 +94,10 @@ Namespace uninstall.Internal
 			Return text
 		End Function
 
-		' Token: 0x04000042 RID: 66
+	
 		Private Shared m_TokenWrapper As Hashtable = New Hashtable()
 
-		' Token: 0x04000043 RID: 67
+	
 		Private Shared _SingletonWrapper As Boolean = False
 	End Class
 End Namespace

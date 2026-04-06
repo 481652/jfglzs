@@ -3,7 +3,6 @@
 Public Partial Class Form3
 	Inherits Global.System.Windows.Forms.Form
 
-	' Token: 0x06000079 RID: 121 RVA: 0x00006388 File Offset: 0x00004588
 	<Global.System.Diagnostics.DebuggerNonUserCode()>
 	Protected Overrides Sub Dispose(disposing As Boolean)
 		Try
@@ -15,6 +14,5 @@ Public Partial Class Form3
 		End Try
 	End Sub
 
-	' Token: 0x04000041 RID: 65
 	Private _Tag As Global.System.ComponentModel.IContainer
 End Class

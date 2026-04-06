@@ -7,9 +7,9 @@ Imports System.Security.Cryptography
 Imports System.Text
 
 Namespace about.Internal
-	' Token: 0x02000010 RID: 16
+
 	Friend Class PrototypeWrapper
-		' Token: 0x0600006A RID: 106 RVA: 0x000042AC File Offset: 0x000024AC
+	
 		Shared Sub New()
 			PrototypeWrapper._StatusWrapper = False
 			PrototypeWrapper.m_AlgoWrapper = False
@@ -27,11 +27,11 @@ Namespace about.Internal
 			PrototypeWrapper.m_DispatcherWrapper = False
 		End Sub
 
-		' Token: 0x0600006B RID: 107 RVA: 0x0000247F File Offset: 0x0000067F
+	
 		Private Sub method_0()
 		End Sub
 
-		' Token: 0x0600006C RID: 108 RVA: 0x00004354 File Offset: 0x00002554
+	
 		Friend Shared Function SelectPolicy(object_0 As Object) As Byte()
 			Dim array As UInteger() = New UInteger(15) {}
 			Dim num As Integer = 448 - object_0.Length * 8 Mod 512
@@ -144,32 +144,32 @@ Namespace about.Internal
 			Return array4
 		End Function
 
-		' Token: 0x0600006D RID: 109 RVA: 0x00002572 File Offset: 0x00000772
+	
 		Private Shared Sub ListPolicy(ByRef uint_0 As UInteger, uint_1 As UInteger, uint_2 As UInteger, uint_3 As UInteger, uint_4 As UInteger, ushort_0 As UShort, uint_5 As UInteger, object_0 As Object)
 			uint_0 = uint_1 + PrototypeWrapper.CalculatePolicy(uint_0 + ((uint_1 And uint_2) Or (Not uint_1 And uint_3)) + object_0(CInt(CType(uint_4, UIntPtr))) + PrototypeWrapper.proxyWrapper(CInt(CType((uint_5 - 1UI), UIntPtr))), ushort_0)
 		End Sub
 
-		' Token: 0x0600006E RID: 110 RVA: 0x0000259D File Offset: 0x0000079D
+	
 		Private Shared Sub ViewPolicy(ByRef uint_0 As UInteger, uint_1 As UInteger, uint_2 As UInteger, uint_3 As UInteger, uint_4 As UInteger, ushort_0 As UShort, uint_5 As UInteger, object_0 As Object)
 			uint_0 = uint_1 + PrototypeWrapper.CalculatePolicy(uint_0 + ((uint_1 And uint_3) Or (uint_2 And Not uint_3)) + object_0(CInt(CType(uint_4, UIntPtr))) + PrototypeWrapper.proxyWrapper(CInt(CType((uint_5 - 1UI), UIntPtr))), ushort_0)
 		End Sub
 
-		' Token: 0x0600006F RID: 111 RVA: 0x000025C8 File Offset: 0x000007C8
+	
 		Private Shared Sub SetupPolicy(ByRef uint_0 As UInteger, uint_1 As UInteger, uint_2 As UInteger, uint_3 As UInteger, uint_4 As UInteger, ushort_0 As UShort, uint_5 As UInteger, object_0 As Object)
 			uint_0 = uint_1 + PrototypeWrapper.CalculatePolicy(uint_0 + (uint_1 Xor uint_2 Xor uint_3) + object_0(CInt(CType(uint_4, UIntPtr))) + PrototypeWrapper.proxyWrapper(CInt(CType((uint_5 - 1UI), UIntPtr))), ushort_0)
 		End Sub
 
-		' Token: 0x06000070 RID: 112 RVA: 0x000025F0 File Offset: 0x000007F0
+	
 		Private Shared Sub ClonePolicy(ByRef uint_0 As UInteger, uint_1 As UInteger, uint_2 As UInteger, uint_3 As UInteger, uint_4 As UInteger, ushort_0 As UShort, uint_5 As UInteger, object_0 As Object)
 			uint_0 = uint_1 + PrototypeWrapper.CalculatePolicy(uint_0 + (uint_2 Xor (uint_1 Or Not uint_3)) + object_0(CInt(CType(uint_4, UIntPtr))) + PrototypeWrapper.proxyWrapper(CInt(CType((uint_5 - 1UI), UIntPtr))), ushort_0)
 		End Sub
 
-		' Token: 0x06000071 RID: 113 RVA: 0x00002619 File Offset: 0x00000819
+	
 		Private Shared Function CalculatePolicy(uint_0 As UInteger, ushort_0 As UShort) As UInteger
 			Return uint_0 >> CInt((32US - ushort_0)) Or uint_0 << CInt(ushort_0)
 		End Function
 
-		' Token: 0x06000072 RID: 114 RVA: 0x0000262B File Offset: 0x0000082B
+	
 		Friend Shared Function PublishPolicy() As Boolean
 			If Not PrototypeWrapper._StatusWrapper Then
 				PrototypeWrapper.InsertPolicy()
@@ -178,7 +178,7 @@ Namespace about.Internal
 			Return PrototypeWrapper.m_AlgoWrapper
 		End Function
 
-		' Token: 0x06000073 RID: 115 RVA: 0x000049F8 File Offset: 0x00002BF8
+	
 		Friend Shared Sub InsertPolicy()
 			Try
 				PrototypeWrapper.m_AlgoWrapper = CBool(GetType(RijndaelManaged).Assembly.[GetType]("System.Security.Cryptography.CryptoConfig", False).GetMethod("get_AllowOnlyFipsAlgorithms", BindingFlags.[Static] Or BindingFlags.[Public]).Invoke(Nothing, New Object(-1) {}))
@@ -186,7 +186,7 @@ Namespace about.Internal
 			End Try
 		End Sub
 
-		' Token: 0x06000074 RID: 116 RVA: 0x00004A58 File Offset: 0x00002C58
+	
 		Friend Shared Function CheckPolicy() As SymmetricAlgorithm
 			Dim result As SymmetricAlgorithm = Nothing
 			If PrototypeWrapper.PublishPolicy() Then
@@ -200,7 +200,7 @@ Namespace about.Internal
 			Return result
 		End Function
 
-		' Token: 0x06000075 RID: 117 RVA: 0x00002644 File Offset: 0x00000844
+	
 		Friend Shared Function StartPolicy(byte_0 As Byte()) As Byte()
 			If Not PrototypeWrapper.PublishPolicy() Then
 				Return New MD5CryptoServiceProvider().ComputeHash(byte_0)
@@ -208,7 +208,7 @@ Namespace about.Internal
 			Return PrototypeWrapper.SelectPolicy(byte_0)
 		End Function
 
-		' Token: 0x06000076 RID: 118 RVA: 0x00004A98 File Offset: 0x00002C98
+	
 		Shared Function EnablePolicy(int_0 As Integer) As Boolean
 			If PrototypeWrapper._GetterWrapper.Length = 0 Then
 				Dim binaryReader As BinaryReader = New BinaryReader(GetType(PrototypeWrapper).Assembly.GetManifestResourceStream("50e256ac-44c9-478b-aa05-792542ad293e"))
@@ -472,7 +472,7 @@ Namespace about.Internal
 			Return False
 		End Function
 
-		' Token: 0x06000077 RID: 119 RVA: 0x0000559C File Offset: 0x0000379C
+	
 		Shared Function CancelPolicy(int_0 As Integer) As String
 			If PrototypeWrapper.callbackWrapper.Length = 0 Then
 				Dim binaryReader As BinaryReader = New BinaryReader(GetType(PrototypeWrapper).Assembly.GetManifestResourceStream("f505fc1b-5fac-44f1-98d0-d5b134c65e47"))
@@ -795,7 +795,7 @@ Namespace about.Internal
 			Return ""
 		End Function
 
-		' Token: 0x06000078 RID: 120 RVA: 0x00006304 File Offset: 0x00004504
+	
 		Shared Function FillPolicy(int_0 As Integer) As String
 			If PrototypeWrapper.strategyWrapper.Length = 0 Then
 				Dim binaryReader As BinaryReader = New BinaryReader(GetType(PrototypeWrapper).Assembly.GetManifestResourceStream("f505fc1b-5fac-44f1-98d0-d5b134c65e47"))
@@ -1147,16 +1147,16 @@ Namespace about.Internal
 			Return [string]
 		End Function
 
-		' Token: 0x06000079 RID: 121 RVA: 0x00007198 File Offset: 0x00005398
+	
 		Friend Shared Function StopPolicy(string_0 As String) As String
 			Dim array As Byte() = Convert.FromBase64String(string_0)
 			Return Encoding.Unicode.GetString(array, 0, array.Length)
 		End Function
 
-		' Token: 0x0600007A RID: 122
+	
 		Private Declare Function VirtualProtect Lib "kernel32.dll" (intptr_0 As IntPtr, int_0 As Integer, int_1 As Integer, ByRef int_2 As Integer) As Integer
 
-		' Token: 0x0600007B RID: 123 RVA: 0x000071BC File Offset: 0x000053BC
+	
 		<PrototypeWrapper.SpecificationWrapper(GetType(PrototypeWrapper.SpecificationWrapper.ConfigurationWrapper(Of Object)()))>
 		Shared Sub VisitPolicy()
 			If Not PrototypeWrapper.m_DispatcherWrapper Then
@@ -1539,7 +1539,7 @@ Namespace about.Internal
 			End If
 		End Sub
 
-		' Token: 0x0600007C RID: 124 RVA: 0x0000822C File Offset: 0x0000642C
+	
 		Friend Shared Function RestartPolicy(assembly_0 As Assembly) As Object
 			Try
 				If File.Exists(CType(assembly_0, Assembly).Location) Then
@@ -1562,19 +1562,19 @@ Namespace about.Internal
 			Return ""
 		End Function
 
-		' Token: 0x0600007D RID: 125
+	
 		Private Declare Function WriteProcessMemory Lib "kernel32.dll" (intptr_0 As IntPtr, intptr_1 As IntPtr, <[In]()> <Out()> byte_0 As Byte(), uint_0 As UInteger, <System.Runtime.InteropServices.OutAttribute()> ByRef intptr_2 As IntPtr) As Integer
 
-		' Token: 0x0600007E RID: 126
+	
 		Private Declare Function ReadProcessMemory Lib "kernel32.dll" (intptr_0 As IntPtr, intptr_1 As IntPtr, <[In]()> <Out()> byte_0 As Byte(), uint_0 As UInteger, <System.Runtime.InteropServices.OutAttribute()> ByRef intptr_2 As IntPtr) As Integer
 
-		' Token: 0x0600007F RID: 127
+	
 		Private Declare Function OpenProcess Lib "kernel32.dll" (uint_0 As UInteger, int_0 As Integer, uint_1 As UInteger) As IntPtr
 
-		' Token: 0x06000080 RID: 128
+	
 		Private Declare Function CloseHandle Lib "kernel32.dll" (intptr_0 As IntPtr) As Integer
 
-		' Token: 0x06000081 RID: 129 RVA: 0x0000833C File Offset: 0x0000653C
+	
 		Private Shared Function DefineWrapper(string_0 As String) As Byte()
 			Dim array As Byte()
 			Using fileStream As FileStream = New FileStream(string_0, FileMode.Open, FileAccess.Read, FileShare.Read)
@@ -1591,7 +1591,7 @@ Namespace about.Internal
 			Return array
 		End Function
 
-		' Token: 0x06000082 RID: 130 RVA: 0x000083A4 File Offset: 0x000065A4
+	
 		Private Shared Function SortWrapper(byte_0 As Byte()) As Byte()
 			Dim memoryStream As MemoryStream = New MemoryStream()
 			Dim symmetricAlgorithm As SymmetricAlgorithm = PrototypeWrapper.CheckPolicy()
@@ -1603,37 +1603,37 @@ Namespace about.Internal
 			Return memoryStream.ToArray()
 		End Function
 
-		' Token: 0x06000083 RID: 131 RVA: 0x0000265F File Offset: 0x0000085F
+	
 		Private Function PostWrapper() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x06000084 RID: 132 RVA: 0x0000265F File Offset: 0x0000085F
+	
 		Private Function ConnectWrapper() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x06000085 RID: 133 RVA: 0x0000265F File Offset: 0x0000085F
+	
 		Private Function DestroyWrapper() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x06000086 RID: 134 RVA: 0x0000265F File Offset: 0x0000085F
+	
 		Private Function ValidateWrapper() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x06000087 RID: 135 RVA: 0x0000265F File Offset: 0x0000085F
+	
 		Private Function LogoutWrapper() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x06000088 RID: 136 RVA: 0x0000265F File Offset: 0x0000085F
+	
 		Private Function ComputeWrapper() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x06000089 RID: 137 RVA: 0x00008414 File Offset: 0x00006614
+	
 		Friend Function RemoveWrapper() As Byte()
 			Dim text As String = "{11111-22222-40001-00001}"
 			If text.Length > 0 Then
@@ -1642,7 +1642,7 @@ Namespace about.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x0600008A RID: 138 RVA: 0x00008454 File Offset: 0x00006654
+	
 		Friend Function PatchWrapper() As Byte()
 			Dim text As String = "{11111-22222-40001-00002}"
 			If text.Length > 0 Then
@@ -1651,7 +1651,7 @@ Namespace about.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x0600008B RID: 139 RVA: 0x00008494 File Offset: 0x00006694
+	
 		Friend Function MapWrapper() As Byte()
 			Dim text As String = "{11111-22222-50001-00001}"
 			If text.Length > 0 Then
@@ -1660,7 +1660,7 @@ Namespace about.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x0600008C RID: 140 RVA: 0x000084D4 File Offset: 0x000066D4
+	
 		Friend Function InvokeWrapper() As Byte()
 			Dim text As String = "{11111-22222-50001-00002}"
 			If text.Length > 0 Then
@@ -1669,7 +1669,7 @@ Namespace about.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x0600008D RID: 141 RVA: 0x00008514 File Offset: 0x00006714
+	
 		Friend Function ExcludeWrapper() As Byte()
 			Dim text As String = "{11111-22222-60001-00001}"
 			If text.Length > 0 Then
@@ -1678,7 +1678,7 @@ Namespace about.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x0600008E RID: 142 RVA: 0x00008554 File Offset: 0x00006754
+	
 		Friend Function LoginWrapper() As Byte()
 			Dim text As String = "{11111-22222-60001-00002}"
 			If text.Length > 0 Then
@@ -1687,7 +1687,7 @@ Namespace about.Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x0600008F RID: 143 RVA: 0x00008594 File Offset: 0x00006794
+	
 		Friend Shared Function PrintWrapper(string_0 As String, string_1 As String) As String
 			Dim bytes As Byte() = Encoding.Unicode.GetBytes(string_0)
 			Dim array As Byte() = bytes
@@ -1703,66 +1703,66 @@ Namespace about.Internal
 			Return Convert.ToBase64String(memoryStream.ToArray())
 		End Function
 
-		' Token: 0x04000028 RID: 40
+	
 		Private Shared _StatusWrapper As Boolean
 
-		' Token: 0x04000029 RID: 41
+	
 		Private Shared _GetterWrapper As Byte()
 
-		' Token: 0x0400002A RID: 42
+	
 		Private Shared callbackWrapper As Byte()
 
-		' Token: 0x0400002B RID: 43
+	
 		Private Shared m_RefWrapper As IntPtr
 
-		' Token: 0x0400002C RID: 44
+	
 		Private Shared m_DispatcherWrapper As Boolean
 
-		' Token: 0x0400002D RID: 45
+	
 		Private Shared m_AccountWrapper As Integer()
 
-		' Token: 0x0400002E RID: 46
+	
 		Private Shared proxyWrapper As UInteger() = New UInteger() { 3614090360UI, 3905402710UI, 606105819UI, 3250441966UI, 4118548399UI, 1200080426UI, 2821735955UI, 4249261313UI, 1770035416UI, 2336552879UI, 4294925233UI, 2304563134UI, 1804603682UI, 4254626195UI, 2792965006UI, 1236535329UI, 4129170786UI, 3225465664UI, 643717713UI, 3921069994UI, 3593408605UI, 38016083UI, 3634488961UI, 3889429448UI, 568446438UI, 3275163606UI, 4107603335UI, 1163531501UI, 2850285829UI, 4243563512UI, 1735328473UI, 2368359562UI, 4294588738UI, 2272392833UI, 1839030562UI, 4259657740UI, 2763975236UI, 1272893353UI, 4139469664UI, 3200236656UI, 681279174UI, 3936430074UI, 3572445317UI, 76029189UI, 3654602809UI, 3873151461UI, 530742520UI, 3299628645UI, 4096336452UI, 1126891415UI, 2878612391UI, 4237533241UI, 1700485571UI, 2399980690UI, 4293915773UI, 2240044497UI, 1873313359UI, 4264355552UI, 2734768916UI, 1309151649UI, 4149444226UI, 3174756917UI, 718787259UI, 3951481745UI }
 
-		' Token: 0x0400002F RID: 47
+	
 		Private Shared baseWrapper As Integer
 
-		' Token: 0x04000030 RID: 48
+	
 		Private Shared resolverWrapper As Byte()
 
-		' Token: 0x04000031 RID: 49
+	
 		Private Shared _ComposerWrapper As String()
 
-		' Token: 0x04000032 RID: 50
+	
 		Private Shared m_AlgoWrapper As Boolean
 
-		' Token: 0x04000033 RID: 51
+	
 		Private Shared _ReponseWrapper As Integer
 
-		' Token: 0x04000034 RID: 52
+	
 		Private Shared strategyWrapper As Byte()
 
-		' Token: 0x04000035 RID: 53
+	
 		Private Shared filterWrapper As IntPtr
 
-		' Token: 0x04000036 RID: 54
+	
 		Private Shared productWrapper As Long
 
-		' Token: 0x02000011 RID: 17
+	
 		Friend Class SpecificationWrapper
 			Inherits Attribute
 
-			' Token: 0x06000091 RID: 145 RVA: 0x00002662 File Offset: 0x00000862
+		
 			<PrototypeWrapper.SpecificationWrapper(GetType(PrototypeWrapper.SpecificationWrapper.ConfigurationWrapper(Of Object)()))>
 			Public Sub New(object_0 As Object)
 			End Sub
 
-			' Token: 0x02000012 RID: 18
+		
 			Friend Class ConfigurationWrapper(Of T)
 			End Class
 		End Class
 
-		' Token: 0x02000013 RID: 19
+	
 		<Flags()>
 		Private Enum VersionControlLabelDocumentSaveOptions
 		End Enum

@@ -13,14 +13,12 @@ Imports przs.Internal
 Public Partial Class Form4
 	Inherits Form
 
-	' Token: 0x06000081 RID: 129 RVA: 0x0000269B File Offset: 0x0000089B
 	Public Sub New()
 		AddHandler MyBase.Load, AddressOf Me.SearchAttribute
 		AddHandler MyBase.FormClosing, AddressOf Me.LogoutAttribute
 		Me.AddAttribute()
 	End Sub
 
-	' Token: 0x06000083 RID: 131 RVA: 0x0000665C File Offset: 0x0000485C
 	<DebuggerStepThrough()>
 	Private Sub AddAttribute()
 		Me.m_Proccesor = New Container()
@@ -60,12 +58,10 @@ Public Partial Class Form4
 		MyBase.PerformLayout()
 	End Sub
 
-	' Token: 0x17000027 RID: 39
 	' (get) Token: 0x06000084 RID: 132 RVA: 0x000026CD File Offset: 0x000008CD
 	' (set) Token: 0x06000085 RID: 133 RVA: 0x000026D5 File Offset: 0x000008D5
 	Friend Overridable Property shuoming As Label
 
-	' Token: 0x17000028 RID: 40
 	' (get) Token: 0x06000086 RID: 134 RVA: 0x000026DE File Offset: 0x000008DE
 	' (set) Token: 0x06000087 RID: 135 RVA: 0x00006864 File Offset: 0x00004A64
 	Friend Overridable Property Timer_frm4 As Timer
@@ -89,18 +85,14 @@ Public Partial Class Form4
 		End Set
 	End Property
 
-	' Token: 0x17000029 RID: 41
 	' (get) Token: 0x06000088 RID: 136 RVA: 0x000026E6 File Offset: 0x000008E6
 	' (set) Token: 0x06000089 RID: 137 RVA: 0x000026EE File Offset: 0x000008EE
 	Friend Overridable Property Label2 As Label
 
-	' Token: 0x0600008A RID: 138
 	Public Declare Ansi Function ClipCursor Lib "user32" (lpRect As Form4.RECT) As Integer
 
-	' Token: 0x0600008B RID: 139
 	Private Declare Ansi Function Beep Lib "kernel32" (long_0 As Long, long_1 As Long) As Long
 
-	' Token: 0x0600008C RID: 140 RVA: 0x000068A8 File Offset: 0x00004AA8
 	Private Sub PatchAttribute(sender As Object, e As EventArgs)
 		MyBase.TopMost = True
 		Dim lpRect As Form4.RECT
@@ -115,12 +107,10 @@ Public Partial Class Form4
 		End If
 	End Sub
 
-	' Token: 0x0600008D RID: 141 RVA: 0x000026F7 File Offset: 0x000008F7
 	Private Sub SearchAttribute(sender As Object, e As EventArgs)
 		Me.Timer_frm4.Enabled = True
 	End Sub
 
-	' Token: 0x0600008E RID: 142 RVA: 0x00006918 File Offset: 0x00004B18
 	Private Sub LogoutAttribute(sender As Object, e As FormClosingEventArgs)
 		If przs.Internal.Message.tokenizer Then
 			e.Cancel = True
@@ -135,36 +125,31 @@ Public Partial Class Form4
 		Form4.ClipCursor(lpRect)
 	End Sub
 
-	' Token: 0x04000046 RID: 70
 	<CompilerGenerated()>
 	<AccessedThroughProperty("shuoming")>
 	Private _Dispatcher As Label
 
-	' Token: 0x04000047 RID: 71
 	<AccessedThroughProperty("Timer_frm4")>
 	<CompilerGenerated()>
 	Private m_Serializer As Timer
 
-	' Token: 0x04000048 RID: 72
 	<CompilerGenerated()>
 	<AccessedThroughProperty("Label2")>
 	Private m_Helper As Label
 
-	' Token: 0x04000049 RID: 73
 	Private _Param As Integer
 
-	' Token: 0x02000011 RID: 17
 	Public Structure RECT
-		' Token: 0x0400004A RID: 74
+	
 		Public Left As Integer
 
-		' Token: 0x0400004B RID: 75
+	
 		Public Top As Integer
 
-		' Token: 0x0400004C RID: 76
+	
 		Public Right As Integer
 
-		' Token: 0x0400004D RID: 77
+	
 		Public Bottom As Integer
 	End Structure
 End Class

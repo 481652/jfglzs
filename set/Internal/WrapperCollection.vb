@@ -7,9 +7,9 @@ Imports System.Security.Cryptography
 Imports System.Text
 
 Namespace [set].Internal
-	' Token: 0x02000013 RID: 19
+
 	Friend Class WrapperCollection
-		' Token: 0x060000EB RID: 235 RVA: 0x0000B09C File Offset: 0x0000929C
+	
 		Shared Sub New()
 			WrapperCollection.eventCollection = False
 			WrapperCollection.policyCollection = New Byte(-1) {}
@@ -26,11 +26,11 @@ Namespace [set].Internal
 			WrapperCollection.processCollection = False
 		End Sub
 
-		' Token: 0x060000EC RID: 236 RVA: 0x00002930 File Offset: 0x00000B30
+	
 		Private Sub method_0()
 		End Sub
 
-		' Token: 0x060000ED RID: 237 RVA: 0x0000B144 File Offset: 0x00009344
+	
 		Friend Shared Function DestroyContext(object_0 As Object) As Byte()
 			Dim array As UInteger() = New UInteger(15) {}
 			Dim num As Integer = 448 - object_0.Length * 8 Mod 512
@@ -143,32 +143,32 @@ Namespace [set].Internal
 			Return array4
 		End Function
 
-		' Token: 0x060000EE RID: 238 RVA: 0x00002932 File Offset: 0x00000B32
+	
 		Private Shared Sub ForgotContext(ByRef uint_0 As UInteger, uint_1 As UInteger, uint_2 As UInteger, uint_3 As UInteger, uint_4 As UInteger, ushort_0 As UShort, uint_5 As UInteger, object_0 As Object)
 			uint_0 = uint_1 + WrapperCollection.AssetContext(uint_0 + ((uint_1 And uint_2) Or (Not uint_1 And uint_3)) + object_0(CInt(CType(uint_4, UIntPtr))) + WrapperCollection.listCollection(CInt(CType((uint_5 - 1UI), UIntPtr))), ushort_0)
 		End Sub
 
-		' Token: 0x060000EF RID: 239 RVA: 0x0000295D File Offset: 0x00000B5D
+	
 		Private Shared Sub DisableContext(ByRef uint_0 As UInteger, uint_1 As UInteger, uint_2 As UInteger, uint_3 As UInteger, uint_4 As UInteger, ushort_0 As UShort, uint_5 As UInteger, object_0 As Object)
 			uint_0 = uint_1 + WrapperCollection.AssetContext(uint_0 + ((uint_1 And uint_3) Or (uint_2 And Not uint_3)) + object_0(CInt(CType(uint_4, UIntPtr))) + WrapperCollection.listCollection(CInt(CType((uint_5 - 1UI), UIntPtr))), ushort_0)
 		End Sub
 
-		' Token: 0x060000F0 RID: 240 RVA: 0x00002988 File Offset: 0x00000B88
+	
 		Private Shared Sub PostContext(ByRef uint_0 As UInteger, uint_1 As UInteger, uint_2 As UInteger, uint_3 As UInteger, uint_4 As UInteger, ushort_0 As UShort, uint_5 As UInteger, object_0 As Object)
 			uint_0 = uint_1 + WrapperCollection.AssetContext(uint_0 + (uint_1 Xor uint_2 Xor uint_3) + object_0(CInt(CType(uint_4, UIntPtr))) + WrapperCollection.listCollection(CInt(CType((uint_5 - 1UI), UIntPtr))), ushort_0)
 		End Sub
 
-		' Token: 0x060000F1 RID: 241 RVA: 0x000029B0 File Offset: 0x00000BB0
+	
 		Private Shared Sub PopContext(ByRef uint_0 As UInteger, uint_1 As UInteger, uint_2 As UInteger, uint_3 As UInteger, uint_4 As UInteger, ushort_0 As UShort, uint_5 As UInteger, object_0 As Object)
 			uint_0 = uint_1 + WrapperCollection.AssetContext(uint_0 + (uint_2 Xor (uint_1 Or Not uint_3)) + object_0(CInt(CType(uint_4, UIntPtr))) + WrapperCollection.listCollection(CInt(CType((uint_5 - 1UI), UIntPtr))), ushort_0)
 		End Sub
 
-		' Token: 0x060000F2 RID: 242 RVA: 0x000029D9 File Offset: 0x00000BD9
+	
 		Private Shared Function AssetContext(uint_0 As UInteger, ushort_0 As UShort) As UInteger
 			Return uint_0 >> CInt((32US - ushort_0)) Or uint_0 << CInt(ushort_0)
 		End Function
 
-		' Token: 0x060000F3 RID: 243 RVA: 0x000029EB File Offset: 0x00000BEB
+	
 		Friend Shared Function RevertContext() As Boolean
 			If Not WrapperCollection.m_DicCollection Then
 				WrapperCollection.SortCollection()
@@ -177,7 +177,7 @@ Namespace [set].Internal
 			Return WrapperCollection.eventCollection
 		End Function
 
-		' Token: 0x060000F4 RID: 244 RVA: 0x0000B7E8 File Offset: 0x000099E8
+	
 		Friend Shared Sub SortCollection()
 			Try
 				WrapperCollection.eventCollection = CBool(GetType(RijndaelManaged).Assembly.[GetType]("System.Security.Cryptography.CryptoConfig", False).GetMethod("get_AllowOnlyFipsAlgorithms", BindingFlags.[Static] Or BindingFlags.[Public]).Invoke(Nothing, New Object(-1) {}))
@@ -185,7 +185,7 @@ Namespace [set].Internal
 			End Try
 		End Sub
 
-		' Token: 0x060000F5 RID: 245 RVA: 0x0000B848 File Offset: 0x00009A48
+	
 		Friend Shared Function InterruptCollection() As SymmetricAlgorithm
 			Dim result As SymmetricAlgorithm = Nothing
 			If WrapperCollection.RevertContext() Then
@@ -199,7 +199,7 @@ Namespace [set].Internal
 			Return result
 		End Function
 
-		' Token: 0x060000F6 RID: 246 RVA: 0x00002A04 File Offset: 0x00000C04
+	
 		Friend Shared Function PrintCollection(byte_0 As Byte()) As Byte()
 			If Not WrapperCollection.RevertContext() Then
 				Return New MD5CryptoServiceProvider().ComputeHash(byte_0)
@@ -207,7 +207,7 @@ Namespace [set].Internal
 			Return WrapperCollection.DestroyContext(byte_0)
 		End Function
 
-		' Token: 0x060000F7 RID: 247 RVA: 0x0000B888 File Offset: 0x00009A88
+	
 		Shared Function CalculateCollection(int_0 As Integer) As Boolean
 			If WrapperCollection.m_ServiceCollection.Length = 0 Then
 				Dim binaryReader As BinaryReader = New BinaryReader(GetType(WrapperCollection).Assembly.GetManifestResourceStream("4b378505-5ac5-46a6-950d-1c301fe98533"))
@@ -483,7 +483,7 @@ Namespace [set].Internal
 			Return False
 		End Function
 
-		' Token: 0x060000F8 RID: 248 RVA: 0x0000C408 File Offset: 0x0000A608
+	
 		Shared Function ReflectCollection(int_0 As Integer) As String
 			If WrapperCollection.reponseCollection.Length = 0 Then
 				Dim binaryReader As BinaryReader = New BinaryReader(GetType(WrapperCollection).Assembly.GetManifestResourceStream("4b109a6f-94c5-4d4c-bae5-302725b9bc38"))
@@ -811,7 +811,7 @@ Namespace [set].Internal
 			Return ""
 		End Function
 
-		' Token: 0x060000F9 RID: 249 RVA: 0x0000D1AC File Offset: 0x0000B3AC
+	
 		Shared Function SetupCollection(int_0 As Integer) As String
 			If WrapperCollection.readerCollection.Length = 0 Then
 				Dim binaryReader As BinaryReader = New BinaryReader(GetType(WrapperCollection).Assembly.GetManifestResourceStream("4b109a6f-94c5-4d4c-bae5-302725b9bc38"))
@@ -1168,16 +1168,16 @@ Namespace [set].Internal
 			Return [string]
 		End Function
 
-		' Token: 0x060000FA RID: 250 RVA: 0x0000E078 File Offset: 0x0000C278
+	
 		Friend Shared Function ConcatCollection(string_0 As String) As String
 			Dim array As Byte() = Convert.FromBase64String(string_0)
 			Return Encoding.Unicode.GetString(array, 0, array.Length)
 		End Function
 
-		' Token: 0x060000FB RID: 251
+	
 		Private Declare Function VirtualProtect Lib "kernel32.dll" (intptr_0 As IntPtr, int_0 As Integer, int_1 As Integer, ByRef int_2 As Integer) As Integer
 
-		' Token: 0x060000FC RID: 252 RVA: 0x0000E09C File Offset: 0x0000C29C
+	
 		<WrapperCollection.PublisherCollection(GetType(WrapperCollection.PublisherCollection.PredicateCollection(Of Object)()))>
 		Shared Sub CompareCollection()
 			If Not WrapperCollection.processCollection Then
@@ -1555,7 +1555,7 @@ Namespace [set].Internal
 			End If
 		End Sub
 
-		' Token: 0x060000FD RID: 253 RVA: 0x0000F114 File Offset: 0x0000D314
+	
 		Friend Shared Function DeleteCollection(assembly_0 As Assembly) As Object
 			Try
 				If File.Exists(CType(assembly_0, Assembly).Location) Then
@@ -1578,19 +1578,19 @@ Namespace [set].Internal
 			Return ""
 		End Function
 
-		' Token: 0x060000FE RID: 254
+	
 		Private Declare Function WriteProcessMemory Lib "kernel32.dll" (intptr_0 As IntPtr, intptr_1 As IntPtr, <[In]()> <Out()> byte_0 As Byte(), uint_0 As UInteger, <System.Runtime.InteropServices.OutAttribute()> ByRef intptr_2 As IntPtr) As Integer
 
-		' Token: 0x060000FF RID: 255
+	
 		Private Declare Function ReadProcessMemory Lib "kernel32.dll" (intptr_0 As IntPtr, intptr_1 As IntPtr, <[In]()> <Out()> byte_0 As Byte(), uint_0 As UInteger, <System.Runtime.InteropServices.OutAttribute()> ByRef intptr_2 As IntPtr) As Integer
 
-		' Token: 0x06000100 RID: 256
+	
 		Private Declare Function OpenProcess Lib "kernel32.dll" (uint_0 As UInteger, int_0 As Integer, uint_1 As UInteger) As IntPtr
 
-		' Token: 0x06000101 RID: 257
+	
 		Private Declare Function CloseHandle Lib "kernel32.dll" (intptr_0 As IntPtr) As Integer
 
-		' Token: 0x06000102 RID: 258 RVA: 0x0000F224 File Offset: 0x0000D424
+	
 		Private Shared Function ComputeCollection(string_0 As String) As Byte()
 			Dim array As Byte()
 			Using fileStream As FileStream = New FileStream(string_0, FileMode.Open, FileAccess.Read, FileShare.Read)
@@ -1607,7 +1607,7 @@ Namespace [set].Internal
 			Return array
 		End Function
 
-		' Token: 0x06000103 RID: 259 RVA: 0x0000F28C File Offset: 0x0000D48C
+	
 		Private Shared Function DefineCollection(byte_0 As Byte()) As Byte()
 			Dim memoryStream As MemoryStream = New MemoryStream()
 			Dim symmetricAlgorithm As SymmetricAlgorithm = WrapperCollection.InterruptCollection()
@@ -1619,37 +1619,37 @@ Namespace [set].Internal
 			Return memoryStream.ToArray()
 		End Function
 
-		' Token: 0x06000104 RID: 260 RVA: 0x00002A1F File Offset: 0x00000C1F
+	
 		Private Function PushCollection() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x06000105 RID: 261 RVA: 0x00002A1F File Offset: 0x00000C1F
+	
 		Private Function CreateCollection() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x06000106 RID: 262 RVA: 0x00002A1F File Offset: 0x00000C1F
+	
 		Private Function WriteCollection() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x06000107 RID: 263 RVA: 0x00002A1F File Offset: 0x00000C1F
+	
 		Private Function ResolveCollection() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x06000108 RID: 264 RVA: 0x00002A1F File Offset: 0x00000C1F
+	
 		Private Function StartCollection() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x06000109 RID: 265 RVA: 0x00002A1F File Offset: 0x00000C1F
+	
 		Private Function GetCollection() As Byte()
 			Return Nothing
 		End Function
 
-		' Token: 0x0600010A RID: 266 RVA: 0x0000F2FC File Offset: 0x0000D4FC
+	
 		Friend Function LogoutCollection() As Byte()
 			Dim text As String = "{11111-22222-40001-00001}"
 			If text.Length > 0 Then
@@ -1658,7 +1658,7 @@ Namespace [set].Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x0600010B RID: 267 RVA: 0x0000F33C File Offset: 0x0000D53C
+	
 		Friend Function CustomizeCollection() As Byte()
 			Dim text As String = "{11111-22222-40001-00002}"
 			If text.Length > 0 Then
@@ -1667,7 +1667,7 @@ Namespace [set].Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x0600010C RID: 268 RVA: 0x0000F37C File Offset: 0x0000D57C
+	
 		Friend Function RestartCollection() As Byte()
 			Dim text As String = "{11111-22222-50001-00001}"
 			If text.Length > 0 Then
@@ -1676,7 +1676,7 @@ Namespace [set].Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x0600010D RID: 269 RVA: 0x0000F3BC File Offset: 0x0000D5BC
+	
 		Friend Function PublishCollection() As Byte()
 			Dim text As String = "{11111-22222-50001-00002}"
 			If text.Length > 0 Then
@@ -1685,7 +1685,7 @@ Namespace [set].Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x0600010E RID: 270 RVA: 0x0000F3FC File Offset: 0x0000D5FC
+	
 		Friend Function FillCollection() As Byte()
 			Dim text As String = "{11111-22222-60001-00001}"
 			If text.Length > 0 Then
@@ -1694,7 +1694,7 @@ Namespace [set].Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x0600010F RID: 271 RVA: 0x0000F43C File Offset: 0x0000D63C
+	
 		Friend Function FlushCollection() As Byte()
 			Dim text As String = "{11111-22222-60001-00002}"
 			If text.Length > 0 Then
@@ -1703,7 +1703,7 @@ Namespace [set].Internal
 			Return New Byte() { 1, 2 }
 		End Function
 
-		' Token: 0x06000110 RID: 272 RVA: 0x0000F47C File Offset: 0x0000D67C
+	
 		Friend Shared Function SearchCollection(string_0 As String, string_1 As String) As String
 			Dim bytes As Byte() = Encoding.Unicode.GetBytes(string_0)
 			Dim array As Byte() = bytes
@@ -1719,66 +1719,66 @@ Namespace [set].Internal
 			Return Convert.ToBase64String(memoryStream.ToArray())
 		End Function
 
-		' Token: 0x04000075 RID: 117
+	
 		Private Shared listCollection As UInteger() = New UInteger() { 3614090360UI, 3905402710UI, 606105819UI, 3250441966UI, 4118548399UI, 1200080426UI, 2821735955UI, 4249261313UI, 1770035416UI, 2336552879UI, 4294925233UI, 2304563134UI, 1804603682UI, 4254626195UI, 2792965006UI, 1236535329UI, 4129170786UI, 3225465664UI, 643717713UI, 3921069994UI, 3593408605UI, 38016083UI, 3634488961UI, 3889429448UI, 568446438UI, 3275163606UI, 4107603335UI, 1163531501UI, 2850285829UI, 4243563512UI, 1735328473UI, 2368359562UI, 4294588738UI, 2272392833UI, 1839030562UI, 4259657740UI, 2763975236UI, 1272893353UI, 4139469664UI, 3200236656UI, 681279174UI, 3936430074UI, 3572445317UI, 76029189UI, 3654602809UI, 3873151461UI, 530742520UI, 3299628645UI, 4096336452UI, 1126891415UI, 2878612391UI, 4237533241UI, 1700485571UI, 2399980690UI, 4293915773UI, 2240044497UI, 1873313359UI, 4264355552UI, 2734768916UI, 1309151649UI, 4149444226UI, 3174756917UI, 718787259UI, 3951481745UI }
 
-		' Token: 0x04000076 RID: 118
+	
 		Private Shared m_WriterCollection As IntPtr
 
-		' Token: 0x04000077 RID: 119
+	
 		Private Shared _HelperCollection As Integer()
 
-		' Token: 0x04000078 RID: 120
+	
 		Private Shared structCollection As Long
 
-		' Token: 0x04000079 RID: 121
+	
 		Private Shared _ClassCollection As String()
 
-		' Token: 0x0400007A RID: 122
+	
 		Private Shared eventCollection As Boolean
 
-		' Token: 0x0400007B RID: 123
+	
 		Private Shared reponseCollection As Byte()
 
-		' Token: 0x0400007C RID: 124
+	
 		Private Shared policyCollection As Byte()
 
-		' Token: 0x0400007D RID: 125
+	
 		Private Shared initializerCollection As Integer
 
-		' Token: 0x0400007E RID: 126
+	
 		Private Shared _GlobalCollection As Integer
 
-		' Token: 0x0400007F RID: 127
+	
 		Private Shared m_ServiceCollection As Byte()
 
-		' Token: 0x04000080 RID: 128
+	
 		Private Shared readerCollection As Byte()
 
-		' Token: 0x04000081 RID: 129
+	
 		Private Shared _RoleCollection As IntPtr
 
-		' Token: 0x04000082 RID: 130
+	
 		Private Shared processCollection As Boolean
 
-		' Token: 0x04000083 RID: 131
+	
 		Private Shared m_DicCollection As Boolean = False
 
-		' Token: 0x02000014 RID: 20
+	
 		Friend Class PublisherCollection
 			Inherits Attribute
 
-			' Token: 0x06000112 RID: 274 RVA: 0x00002A22 File Offset: 0x00000C22
+		
 			<WrapperCollection.PublisherCollection(GetType(WrapperCollection.PublisherCollection.PredicateCollection(Of Object)()))>
 			Public Sub New(object_0 As Object)
 			End Sub
 
-			' Token: 0x02000015 RID: 21
+		
 			Friend Class PredicateCollection(Of T)
 			End Class
 		End Class
 
-		' Token: 0x02000016 RID: 22
+	
 		<Flags()>
 		Private Enum AccountCollection
 		End Enum

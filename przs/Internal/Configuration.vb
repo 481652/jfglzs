@@ -9,13 +9,13 @@ Imports Microsoft.VisualBasic
 Imports Microsoft.VisualBasic.CompilerServices
 
 Namespace przs.Internal
-	' Token: 0x02000008 RID: 8
+
 	<HideModuleName()>
 	<CompilerGenerated()>
 	<DebuggerNonUserCode()>
 	<GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")>
 	Friend NotInheritable Module Configuration
-		' Token: 0x1700000B RID: 11
+	
 		' (get) Token: 0x06000025 RID: 37 RVA: 0x0000242B File Offset: 0x0000062B
 		<EditorBrowsable(EditorBrowsableState.Advanced)>
 		Friend ReadOnly Property ResourceManager As ResourceManager
@@ -27,7 +27,7 @@ Namespace przs.Internal
 			End Get
 		End Property
 
-		' Token: 0x1700000C RID: 12
+	
 		' (set) Token: 0x06000026 RID: 38 RVA: 0x0000245E File Offset: 0x0000065E
 		<EditorBrowsable(EditorBrowsableState.Advanced)>
 		Friend WriteOnly Property Culture As CultureInfo
@@ -36,10 +36,10 @@ Namespace przs.Internal
 			End Set
 		End Property
 
-		' Token: 0x0400000D RID: 13
+	
 		Private resourceMan As ResourceManager
 
-		' Token: 0x0400000E RID: 14
+	
 		Private resourceCulture As Object
 	End Module
 End Namespace
